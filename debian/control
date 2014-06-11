@@ -1,0 +1,122 @@
+Source: plasma-desktop
+Priority: extra
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Scarlett Clark <scarlett@scarlettgatelyclark.com>
+Build-Depends: cmake,
+               debhelper (>= 9.0.0),
+               extra-cmake-modules (>= 0.0.14),
+               kwin-dev,
+               libcanberra-dev,
+               libqt5svg5-dev,
+               libxft-dev,
+               openbox,
+               pkg-kde-tools,
+               plasma-framework-dev,
+               plasma-workspace-dev,
+               qtbase5-dev,
+               xauth,
+               xvfb
+Standards-Version: 3.9.5
+Section: kde
+Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop
+Vcs-Browser: https://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging/plasma-desktop
+Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/plasma-desktop
+
+Package: plasma-desktop-dev
+Architecture: any
+Section: devel
+Depends: libkfontinst5 (= ${binary:Version}),
+         libkfontinstui5 (= ${binary:Version}),
+         plasma-desktop (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Tools and widgets for the desktop
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: plasma-desktop
+Architecture: any
+Depends: plasma-desktop-data (= ${source:Version}),         
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Tools and widgets for the desktop
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: libkfontinst5
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: libkfontinstui5
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: plasma-desktop-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Tools and widgets for the desktop data files
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+ .
+ This package contains the data files
+
+Package: plasma-desktop-dbg
+Section: debug
+Architecture: any
+Recommends: qtbase5-dbg
+Depends: plasma-desktop (= ${binary:Version}), ${misc:Depends}
+Description: Tools and widgets for the desktop debug files
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+ .
+ This package contains the debugging symbols.

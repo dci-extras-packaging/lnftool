@@ -19,8 +19,8 @@ Build-Depends: cmake,
 Standards-Version: 3.9.5
 Section: kde
 Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop
-Vcs-Browser: https://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging/plasma-desktop
-Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/plasma-desktop
+Vcs-Browser: https://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging-next/plasma-desktop
+Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging-next/plasma-desktop
 
 Package: plasma-desktop-dev
 Architecture: any

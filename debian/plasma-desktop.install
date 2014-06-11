@@ -1,6 +1,6 @@
-etc/*
 usr/bin
 usr/lib/*/libexec
-usr/lib/*/libkdeinit5_kaccess.so
 usr/lib/*/qt5
 usr/share/applications
+usr/lib/*/libkdeinit5_kaccess.so
+etc/*

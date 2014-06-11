@@ -5,40 +5,41 @@ XSBC-Original-Maintainer: Scarlett Clark <scarlett@scarlettgatelyclark.com>
 Build-Depends: cmake,
                debhelper (>= 9.0.0),
                extra-cmake-modules (>= 0.0.14),
-               kdoctools-dev,
                kwin-dev,
                libcanberra-dev,
-               libglib2.0-dev,
-               libkf5activities-dev,
-               libkf5attica-dev,
-               libkf5i18n-dev,
-               libkf5kcmutils-dev,
-               libkf5kdelibs4support-dev,
-               libkf5newstuff-dev,
-               libkf5notifyconfig-dev,
-               libkf5runner-dev,
-               libkf5su-dev,
-               libkf5sysguard-dev,
-               libkf5wallet-dev,
-               libphonon4qt5-dev,
-               libphonon4qt5experimental-dev,
-               libpulse-dev,
                libqt5svg5-dev,
-               libqt5x11extras5-dev,
-               libusb-dev,
-               libxcb-image0-dev,
-               libxcb-xkb-dev,
                libxft-dev,
-               libxi-dev,
-               libxkbfile-dev,
                openbox,
                pkg-kde-tools,
                plasma-framework-dev,
                plasma-workspace-dev,
                qtbase5-dev,
-               qtdeclarative5-dev,
                xauth,
-               xvfb
+               xvfb,
+               libqt5x11extras5-dev,
+               qtdeclarative5-dev,
+               libkf5runner-dev,
+               libkf5wallet-dev,
+               libkf5attica-dev,
+               libkf5su-dev,
+               libkf5notifyconfig-dev,
+               libkf5kdelibs4support-dev,
+               libkf5newstuff-dev,
+               libkf5kcmutils-dev,
+               libkf5i18n-dev,
+               kdoctools-dev,
+               libkf5sysguard-dev,
+               libkf5activities-dev,
+               libusb-dev,
+               libxcb-image0-dev,
+               libphonon4qt5-dev,
+               libxcb-xkb-dev,
+               libphonon4qt5experimental-dev,
+               libpulse-dev,
+               libglib2.0-dev,
+               libxkbfile-dev,
+               libxi-dev,
+               libxcursor-dev
 Standards-Version: 3.9.5
 Section: kde
 Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop
@@ -66,9 +67,10 @@ Description: Tools and widgets for the desktop
 
 Package: plasma-desktop
 Architecture: any
-Depends: plasma-desktop-data (= ${source:Version}),
+Depends: plasma-desktop-data (= ${source:Version}),         
          ${misc:Depends},
          ${shlibs:Depends}
+Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -82,7 +84,8 @@ Description: Tools and widgets for the desktop
 
 Package: libkfontinst5
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -96,7 +99,8 @@ Description: Tools and widgets for the desktop library
 
 Package: libkfontinstui5
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -111,6 +115,7 @@ Description: Tools and widgets for the desktop library
 Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.

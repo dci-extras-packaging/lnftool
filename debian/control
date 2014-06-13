@@ -68,6 +68,17 @@ Description: Tools and widgets for the desktop
 Package: plasma-desktop
 Architecture: any
 Depends: plasma-desktop-data (= ${source:Version}),
+         kwin,
+         powerdevil,
+         gdb-minimal,
+         ksysguard,
+         ttf-oxygen-font-family,
+         plasma-workspace,
+         plasma-framework,
+         breeze-cursor-theme,
+         oxygen-icon-theme,
+         kde-style-oxygen-qt5,
+         oxygen-sounds,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: kde-workspace-bin

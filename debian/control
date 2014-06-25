@@ -80,6 +80,7 @@ Depends: plasma-desktop-data (= ${source:Version}),
          kde-style-oxygen-qt5,
          oxygen-sounds,
          plasma-nm,
+         qt5-default,
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: kde-workspace-bin

@@ -3,6 +3,5 @@ plasma-desktop (4:4.97.0-0ubuntu1) UNRELEASED; urgency=medium
   [ Scarlett Clark ]
   * Initial release.
   * add plasma-nm networking depend 
-  * add qt5-default runtime depend required for qdbus 
 
  -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Tue, 10 Jun 2014 10:24:08 +0100

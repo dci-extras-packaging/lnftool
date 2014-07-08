@@ -1,4 +1,3 @@
-usr/lib/*/attica_kde.so
 usr/lib/*/kconf_update_bin
 usr/lib/*/libkfontinst.so
 usr/lib/*/libkfontinstui.so

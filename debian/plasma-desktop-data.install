@@ -19,3 +19,5 @@ usr/share/kthememanager
 usr/share/locale
 usr/share/locale
 usr/share/plasma
+usr/share/config.kcfg
+usr/share/kdm

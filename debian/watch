@@ -1,2 +1,3 @@
 version=3
-ftp://ftp.kde.org/pub/kde/unstable/plasma/([\d\.]+)/src/plasma-desktop-(.*)\.tar\.xz
+http://download.kde.org/unstable/plasma/([\d\.]*)/plasma-desktop-(.*)\.tar\.xz
+http://download.kde.org/stable/plasma/([\d\.]*)/plasma-desktop-(.*)\.tar\.xz

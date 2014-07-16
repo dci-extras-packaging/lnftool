@@ -68,7 +68,7 @@ Description: Tools and widgets for the desktop
 Package: plasma-desktop
 Architecture: any
 Depends: breeze-cursor-theme,
-         gdb-minimal,
+         gdb-minimal | gdb,
          kde-style-oxygen-qt5,
          ksysguard (>= 4:4.90),
          kwin,

@@ -7,6 +7,42 @@ plasma-desktop (4:5.0.0a-0ubuntu1) UNRELEASED; urgency=medium
   * New upstream tarball 
   * Add missing files to install 
 
+  [ Harald Sitter ]
+  * plasma-desktop depends breeze instead of breeze-cursor-theme as breeze
+    provides the core UI styling for all of the shell
+    + Drop oxygen-icon-theme as dependency as breeze packaging handles
+      the oxygen relationship
+    + Drop gdb-minimal | gdb; it is a dep of workspace as that is where drkonqi
+      lives
+    + Depend on kded5 for the kded, style, keyboard and keys kcm as well as
+      the ktouchpadenabler kded module
+    + Add all workspace packages as recommends or depends of plasma-desktop 
+      as the entire bunch comprises what is considered a plasma-desktop.
+      + Depends:
+        - breeze - core theme package. needed by various parts of the stack, so
+                   removing it is almost never possible or viable
+        - kde-cli-tools - core tools like kcmshell5, used to run kcms
+        - oxygen-sounds - applications directly reference oxygen sound names and
+                          as such not having this package will render no sounds
+      + Recommends:
+        - kde-style-oxygen-qt5 - not needed if another style is installed
+        - khelpcenter
+        - khotkeys - advanced hotkey management
+        - kio-extras - extra slaves, mostly useful for preview generator
+        - kmenuedit
+        - kwin - not needed if another wm is installed
+        - kwin-decoration-oxygen - not needed if another decoration is installed
+        - kwrited
+        - plasma-nm
+        - powerdevil
+        - systemsettings
+        - tty-oxygen-font-family
+     + Properly resolve qml module dependencies of plasma-desktop:
+       + plasma-framework (already present)
+       + qtdeclarative5-kf5declarative (kquickcontrolsaddons, kcoreaddons etc.)
+       + qml-module-org-kde-solid
+       + kactivities (for activities)
+
  -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Jul 2014 20:05:33 +0200
 
 plasma-desktop (4:4.98.0-0ubuntu1) utopic; urgency=medium

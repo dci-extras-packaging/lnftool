@@ -67,21 +67,34 @@ Description: Tools and widgets for the desktop
 
 Package: plasma-desktop
 Architecture: any
-Depends: breeze-cursor-theme,
-         gdb-minimal | gdb,
-         kde-style-oxygen-qt5,
-         ksysguard (>= 4:4.90),
-         kwin,
-         oxygen-icon-theme,
+Depends: breeze,
+         kactivities,
+         kde-cli-tools,
+         kded5,
+         qtdeclarative5-kf5declarative,
          oxygen-sounds,
          plasma-desktop-data (= ${source:Version}),
          plasma-framework,
          plasma-nm,
          plasma-workspace,
-         powerdevil,
-         ttf-oxygen-font-family,
+         qml-module-org-kde-solid,
+         qtdeclarative5-kf5declarative,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: kde-style-oxygen-qt5,
+            khelpcenter,
+            khotkeys,
+            kio-extras,
+            kmenuedit,
+            ksysguard,
+            kwin,
+            kwin-decoration-oxygen,
+            kwrited,
+            plasma-nm,
+            powerdevil,
+            oxygen-sounds,
+            systemsettings,
+            ttf-oxygen-font-family
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop

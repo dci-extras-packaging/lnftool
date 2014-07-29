@@ -28,6 +28,7 @@ plasma-desktop (4:5.0.0a-0ubuntu1) UNRELEASED; urgency=medium
         - kde-style-oxygen-qt5 - not needed if another style is installed
         - khelpcenter
         - khotkeys - advanced hotkey management
+        - kinfocenter - information center
         - kio-extras - extra slaves, mostly useful for preview generator
         - kmenuedit
         - kwin - not needed if another wm is installed

@@ -1,4 +1,4 @@
-plasma-desktop (4:5.0.0a-0ubuntu1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.0.1-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Jonathan Riddell ]
   * New upstream release
@@ -44,7 +44,10 @@ plasma-desktop (4:5.0.0a-0ubuntu1) UNRELEASED; urgency=medium
        + qml-module-org-kde-solid
        + kactivities (for activities)
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Jul 2014 20:05:33 +0200
+  [ Jonathan Riddell ]
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Sun, 10 Aug 2014 15:44:47 +0200
 
 plasma-desktop (4:4.98.0-0ubuntu1) utopic; urgency=medium
 

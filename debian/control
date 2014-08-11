@@ -91,9 +91,7 @@ Recommends: kde-style-oxygen-qt5,
             kwin,
             kwin-decoration-oxygen,
             kwrited,
-            plasma-nm,
             powerdevil,
-            oxygen-sounds,
             systemsettings,
             ttf-oxygen-font-family
 Conflicts: kde-workspace-bin

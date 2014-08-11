@@ -139,7 +139,7 @@ Description: Tools and widgets for the desktop library
 Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: kde-workspace-bin
+Conflicts: kde-workspace-bin, kde-workspace-data
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.

@@ -21,3 +21,5 @@ usr/share/locale
 usr/share/plasma
 usr/share/config.kcfg
 usr/share/kdm
+usr/share/polkit-1/actions/org.kde.fontinst.policy
+usr/share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy

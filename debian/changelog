@@ -1,6 +1,10 @@
 plasma-desktop (4:5.0.1-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Jonathan Riddell ]
   * New upstream release
+
+  [ Harald Sitter ]
+  * switch to new pkg-kde-tools
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 11 Aug 2014 15:47:26 +0200
 

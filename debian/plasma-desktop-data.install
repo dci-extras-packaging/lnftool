@@ -1,4 +1,5 @@
 usr/share/color-schemes
+usr/share/config.kcfg
 usr/share/doc
 usr/share/icons
 usr/share/kcm_componentchooser
@@ -9,6 +10,7 @@ usr/share/kcmkeys
 usr/share/kconf_update
 usr/share/kcontrol
 usr/share/kdisplay
+usr/share/kdm
 usr/share/kfontinst
 usr/share/kfontview
 usr/share/knotifications5
@@ -19,7 +21,5 @@ usr/share/kthememanager
 usr/share/locale
 usr/share/locale
 usr/share/plasma
-usr/share/config.kcfg
-usr/share/kdm
 usr/share/polkit-1/actions/org.kde.fontinst.policy
 usr/share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy

@@ -1,5 +1,7 @@
 usr/share/color-schemes
 usr/share/config.kcfg
+usr/share/dbus-1/services
+usr/share/dbus-1/system-services
 usr/share/doc
 usr/share/icons
 usr/share/k*

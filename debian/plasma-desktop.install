@@ -1,5 +1,6 @@
 etc/*
 usr/bin
+usr/lib/*/kconf_update_bin
 usr/lib/*/libexec
 usr/lib/*/libkdeinit5_kaccess.so
 usr/lib/*/qt5

@@ -2,6 +2,14 @@ plasma-desktop (4:5.0.2-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Harald Sitter ]
   * switch to new pkg-kde-tools
+  * Move kconf_update_bin folder to plasma-desktop package (was in -dev)
+    + plasma-desktop now breaks and replaces previous versions of
+      plasma-desktop-dev
+  * Move dbus-1 service files to plasma-desktop-data (was in -dev)
+    + plasma-desktop-data now breaks and replaces previous versions of
+      plasma-desktop-dev
+    + Make the wildcard robust enough to not accidentially end up installing
+      interfaces to -data in the future
 
   [ Scarlett Clark ]
   * New upstream release

@@ -1,1 +1,12 @@
 plasma-desktop: desktop-command-not-in-package usr/share/applications/knetattach.desktop knetattach
+plasma-desktop: package-name-doesnt-match-sonames libkdeinit5-kaccess
+plasma-desktop: binary-without-manpage usr/bin/kaccess
+plasma-desktop: binary-without-manpage usr/bin/kapplymousetheme
+plasma-desktop: binary-without-manpage usr/bin/kfontinst
+plasma-desktop: binary-without-manpage usr/bin/kfontview
+plasma-desktop: binary-without-manpage usr/bin/knetattach
+plasma-desktop: binary-without-manpage usr/bin/krdb
+plasma-desktop: binary-without-manpage usr/bin/solid-action-desktop-gen
+plasma-desktop: dev-pkg-without-shlib-symlink usr/lib/i386-linux-gnu/libkdeinit5_kaccess.so usr/lib/i386-linux-gnu/libkdeinit5_kaccess.so
+plasma-desktop: shlib-without-versioned-soname usr/lib/i386-linux-gnu/libkdeinit5_kaccess.so libkdeinit5_kaccess.so
+plasma-desktop: postinst-must-call-ldconfig usr/lib/i386-linux-gnu/libkdeinit5_kaccess.so

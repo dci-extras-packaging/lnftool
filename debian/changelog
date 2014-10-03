@@ -1,6 +1,10 @@
 plasma-desktop (4:5.0.95-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Jonathan Riddell ]
   * New upstream beta release
+
+  [ Scarlett Clark ]
+  * Fix copyright file (remove spaces) to appease lintian. 
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 01 Oct 2014 15:28:57 +0200
 

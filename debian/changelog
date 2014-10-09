@@ -2,11 +2,13 @@ plasma-desktop (4:5.0.95-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Jonathan Riddell ]
   * New upstream beta release
+  * Add upstream_default-kickoff-applications.diff LP: #1362747
+    "No web browser in app menu"
 
   [ Scarlett Clark ]
-  * Fix copyright file (remove spaces) to appease lintian. 
+  * Fix copyright file (remove spaces) to appease lintian.
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 01 Oct 2014 15:28:57 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 09 Oct 2014 10:47:45 +0200
 
 plasma-desktop (4:5.0.2-0ubuntu1) utopic; urgency=medium
 

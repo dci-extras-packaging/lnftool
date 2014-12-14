@@ -93,6 +93,7 @@ Recommends: kde-style-oxygen-qt5,
             kwin-decoration-oxygen,
             kwrited,
             powerdevil,
+            sni-qt,
             systemsettings,
             ttf-oxygen-font-family
 Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)

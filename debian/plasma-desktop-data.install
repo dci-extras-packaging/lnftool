@@ -9,3 +9,4 @@ usr/share/locale
 usr/share/plasma
 usr/share/polkit-1/actions/org.kde.fontinst.policy
 usr/share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
+usr/share/solid

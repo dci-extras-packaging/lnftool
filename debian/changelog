@@ -1,4 +1,29 @@
-plasma-desktop (4:5.0.2-0ubuntu1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.1.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 15 Dec 2014 13:26:18 +0100
+
+plasma-desktop (4:5.1.1-0ubuntu1) vivid; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream beta release
+  * Add upstream_default-kickoff-applications.diff LP: #1362747
+    "No web browser in app menu"
+
+  [ Scarlett Clark ]
+  * Fix copyright file (remove spaces) to appease lintian.
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * New upstream release with fixed tar
+
+  [ Scarlett Clark ]
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 10 Nov 2014 19:51:38 +0100
+
+plasma-desktop (4:5.0.2-0ubuntu1) utopic; urgency=medium
 
   [ Harald Sitter ]
   * switch to new pkg-kde-tools

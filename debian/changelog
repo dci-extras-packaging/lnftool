@@ -1,3 +1,9 @@
+plasma-desktop (4:5.1.95-0ubuntu3) vivid; urgency=medium
+
+  * remove recommends on kwin-decoration-oxygen, it no longer exists
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 19 Jan 2015 13:17:45 +0100
+
 plasma-desktop (4:5.1.95-0ubuntu2) vivid; urgency=medium
 
   * update build-dep versions for plasma packages

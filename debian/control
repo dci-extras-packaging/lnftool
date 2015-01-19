@@ -95,8 +95,8 @@ Recommends: kde-style-oxygen-qt5,
             sni-qt,
             systemsettings,
             ttf-oxygen-font-family
-Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
-Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
+Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
@@ -141,8 +141,8 @@ Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
 Conflicts: kde-workspace-bin, kde-workspace-data
-Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
-Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
+Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.

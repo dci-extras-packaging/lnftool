@@ -78,25 +78,38 @@ Depends: breeze,
          plasma-framework,
          plasma-nm,
          plasma-workspace,
+         polkit-kde-agent-1,
          qml-module-org-kde-solid,
          qtdeclarative5-kf5declarative,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: kde-style-oxygen-qt5,
+Recommends: bluedevil,
+            kde-config-gtk-style,
+            kde-config-sddm,
+            kde-config-touchpad,
+            kde-style-oxygen-qt5,
             khelpcenter,
             khotkeys,
             kinfocenter,
             kio-extras,
             kmenuedit,
+            kscreen,
+            ksshaskpass,
             ksysguard,
             kwin,
             kwrited,
+            muon-discover,
+            muon-notifier,
+            muon-updater,
             powerdevil,
             sni-qt,
             systemsettings,
-            ttf-oxygen-font-family
-Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
-Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
+            ttf-oxygen-font-family,
+            user-manager
+Breaks: baloo-kf5 (<< 5.5),
+        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+Replaces: baloo-kf5 (<< 5.5),
+          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
@@ -141,8 +154,10 @@ Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
 Conflicts: kde-workspace-bin, kde-workspace-data
-Breaks: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
-Replaces: plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8), baloo-kf5 (<< 5.5)
+Breaks: baloo-kf5 (<< 5.5),
+        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+Replaces: baloo-kf5 (<< 5.5),
+          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.

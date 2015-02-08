@@ -104,7 +104,7 @@ Recommends: bluedevil,
             powerdevil,
             sni-qt,
             systemsettings,
-            ttf-oxygen-font-family,
+            fonts-oxygen,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)

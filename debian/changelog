@@ -1,4 +1,4 @@
-plasma-desktop (4:5.2.0-1~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.2.0-1) experimental; urgency=medium
 
   * Prepare initial Debian release.
   * Add myself as Uploader.
@@ -7,7 +7,7 @@ plasma-desktop (4:5.2.0-1~) UNRELEASED; urgency=medium
     follow cmake.
   * Update copyright information.
 
- -- Maximiliano Curia <maxy@debian.org>  Sun, 08 Feb 2015 22:22:33 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 12 Feb 2015 22:57:30 +0100
 
 plasma-desktop (4:5.2.0-0ubuntu1) vivid; urgency=medium
 

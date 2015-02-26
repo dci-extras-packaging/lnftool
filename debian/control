@@ -29,6 +29,7 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                libusb-dev,
                libxapian-dev,
                libxcb-image0-dev,
+               libxcb-record0-dev,
                libxcb-xkb-dev,
                libxcursor-dev,
                libxft-dev,
@@ -86,7 +87,6 @@ Depends: breeze,
 Recommends: bluedevil,
             kde-config-gtk-style,
             kde-config-sddm,
-            kde-config-touchpad,
             kde-style-oxygen-qt5,
             khelpcenter,
             khotkeys,
@@ -107,8 +107,12 @@ Recommends: bluedevil,
             ttf-oxygen-font-family,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
+        kde-config-touchpad (<< 4:5.2.50),
+        kde-touchpad (<< 5.1.95~),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Replaces: baloo-kf5 (<< 5.5),
+          kde-config-touchpad (<< 4:5.2.50),
+          kde-touchpad (<< 5.1.95~),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
@@ -170,6 +174,15 @@ Description: Tools and widgets for the desktop data files
  This package is part of the KDE Plasma.
  .
  This package contains the data files
+
+Package: kde-touchpad
+Architecture: any
+Depends: plasma-desktop
+Section: oldlibs
+Priority: extra
+Description: transitional package
+ Transitional package for kde-touchpad, this package can be
+ safely removed.
 
 Package: plasma-desktop-dbg
 Section: debug

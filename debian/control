@@ -59,6 +59,10 @@ Depends: libkfontinst5 (= ${binary:Version}),
          plasma-desktop (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: kde-config-touchpad (<< 4:5.2.50),
+        kde-touchpad (<< 5.1.95~)
+Replaces: kde-config-touchpad (<< 4:5.2.50),
+          kde-touchpad (<< 5.1.95~)
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -179,7 +183,7 @@ Description: Tools and widgets for the desktop data files
 
 Package: kde-touchpad
 Architecture: any
-Depends: plasma-desktop
+Depends: plasma-desktop (>= ${source:Version}), ${misc:Depends}
 Section: oldlibs
 Priority: extra
 Description: transitional package

@@ -2,6 +2,7 @@ plasma-desktop: desktop-command-not-in-package usr/share/applications/knetattach
 plasma-desktop: package-name-doesnt-match-sonames libkdeinit5-kaccess
 plasma-desktop: binary-without-manpage usr/bin/kaccess
 plasma-desktop: binary-without-manpage usr/bin/kapplymousetheme
+plasma-desktop: binary-without-manpage usr/bin/kcm-touchpad-list-devices
 plasma-desktop: binary-without-manpage usr/bin/kfontinst
 plasma-desktop: binary-without-manpage usr/bin/kfontview
 plasma-desktop: binary-without-manpage usr/bin/knetattach

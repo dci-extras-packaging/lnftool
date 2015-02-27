@@ -59,10 +59,8 @@ Depends: libkfontinst5 (= ${binary:Version}),
          plasma-desktop (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: kde-config-touchpad (<< 4:5.2.50),
-        kde-touchpad (<< 5.1.95~)
-Replaces: kde-config-touchpad (<< 4:5.2.50),
-          kde-touchpad (<< 5.1.95~)
+Breaks: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
+Replaces: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -113,11 +111,11 @@ Recommends: bluedevil,
             ttf-oxygen-font-family,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
-        kde-config-touchpad (<< 4:5.2.50),
+        kde-config-touchpad (<< ${source:Version}),
         kde-touchpad (<< 5.1.95~),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Replaces: baloo-kf5 (<< 5.5),
-          kde-config-touchpad (<< 4:5.2.50),
+          kde-config-touchpad (<< ${source:Version}),
           kde-touchpad (<< 5.1.95~),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
@@ -183,12 +181,19 @@ Description: Tools and widgets for the desktop data files
 
 Package: kde-touchpad
 Architecture: any
-Depends: plasma-desktop (>= ${source:Version}), ${misc:Depends}
+Depends: plasma-desktop, ${misc:Depends}
 Section: oldlibs
 Priority: extra
-Description: transitional package
- Transitional package for kde-touchpad, this package can be
- safely removed.
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
+
+Package: kde-config-touchpad
+Depends: plasma-desktop, ${misc:Depends}
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
 
 Package: plasma-desktop-dbg
 Section: debug

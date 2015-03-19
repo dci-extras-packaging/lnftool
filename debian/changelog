@@ -1,3 +1,9 @@
+plasma-desktop (4:5.2.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Thu, 19 Mar 2015 15:13:20 -0700
+
 plasma-desktop (4:5.2.1-0ubuntu1) vivid; urgency=medium
 
   * New upstream release

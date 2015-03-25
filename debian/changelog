@@ -5,6 +5,18 @@ plasma-desktop (4:5.2.2-1~) UNRELEASED; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Wed, 25 Mar 2015 09:50:23 +0100
 
+plasma-desktop (4:5.2.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 24 Mar 2015 07:42:28 -0700
+
+plasma-desktop (4:5.2.1-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 23 Feb 2015 09:46:57 -0800
+
 plasma-desktop (4:5.2.0-1) experimental; urgency=medium
 
   * Prepare initial Debian release.

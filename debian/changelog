@@ -1,3 +1,11 @@
+plasma-desktop (4:5.2.2-0ubuntu2) vivid; urgency=medium
+
+  * Add upstream_Hide-pager-when-there-s-only-one-virtual-desktop.patch
+    to hide the pager applet when there is only one virtual desktop.
+    with only one desktop it is pretty useless.
+
+ -- Harald Sitter <sitter@kde.org>  Thu, 26 Mar 2015 14:21:41 +0100
+
 plasma-desktop (4:5.2.2-0ubuntu1) vivid; urgency=medium
 
   * New upstream release

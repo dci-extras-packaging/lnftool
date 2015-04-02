@@ -1,3 +1,10 @@
+plasma-desktop (4:5.2.2-0ubuntu3) vivid; urgency=medium
+
+  * Add upstream_kfontinst-header-alignment.diff from upstream to fix
+    headers in kfontinst kcm
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Apr 2015 15:43:04 +0200
+
 plasma-desktop (4:5.2.2-0ubuntu2) vivid; urgency=medium
 
   * Add upstream_Hide-pager-when-there-s-only-one-virtual-desktop.patch

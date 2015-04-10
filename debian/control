@@ -5,6 +5,7 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                cmake,
                debhelper (>= 9.0.0),
                extra-cmake-modules (>= 1.3.0~),
+               kded-dev,
                kdoctools-dev,
                kwin-dev (>= 4:5.2.2),
                libboost1.55-dev,
@@ -12,11 +13,13 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                libglib2.0-dev,
                libkf5activities-dev (>= 5.2.0),
                libkf5attica-dev (>= 5.2.0),
+               libkf5declarative-dev (>= 5.2.0),
                libkf5i18n-dev (>= 5.2.0),
                libkf5kcmutils-dev (>= 5.2.0),
                libkf5kdelibs4support-dev (>= 5.2.0),
                libkf5newstuff-dev (>= 5.2.0),
                libkf5notifyconfig-dev (>= 5.2.0),
+               libkf5people-dev (>= 5.2.0),
                libkf5runner-dev (>= 5.2.0),
                libkf5su-dev (>= 5.2.0),
                libkf5sysguard-dev (>= 5.2.0),
@@ -29,6 +32,7 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                libusb-dev,
                libxapian-dev,
                libxcb-image0-dev,
+               libxcb-record0-dev,
                libxcb-xkb-dev,
                libxcursor-dev,
                libxft-dev,
@@ -41,6 +45,8 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                qtbase5-dev,
                qtdeclarative5-dev,
                xauth,
+               xserver-xorg-dev,
+               xserver-xorg-input-synaptics-dev,
                xvfb
 Standards-Version: 3.9.5
 Section: kde
@@ -56,6 +62,8 @@ Depends: libkfontinst5 (= ${binary:Version}),
          plasma-desktop (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
+Replaces: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -79,6 +87,7 @@ Depends: breeze,
          plasma-nm,
          plasma-workspace,
          polkit-kde-agent-1,
+         qml-module-org-kde-kwindowsystem,
          qml-module-org-kde-solid,
          qtdeclarative5-kf5declarative,
          ${misc:Depends},
@@ -86,7 +95,6 @@ Depends: breeze,
 Recommends: bluedevil,
             kde-config-gtk-style,
             kde-config-sddm,
-            kde-config-touchpad,
             kde-style-oxygen-qt5,
             khelpcenter,
             khotkeys,
@@ -107,8 +115,12 @@ Recommends: bluedevil,
             ttf-oxygen-font-family,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
+        kde-config-touchpad (<< ${source:Version}),
+        kde-touchpad (<< 5.1.95~),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Replaces: baloo-kf5 (<< 5.5),
+          kde-config-touchpad (<< ${source:Version}),
+          kde-touchpad (<< 5.1.95~),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
@@ -150,6 +162,20 @@ Description: Tools and widgets for the desktop library
  .
  This package is part of the KDE Plasma.
 
+Package: libkf5activitiesexperimentalstats1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
 Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
@@ -170,6 +196,22 @@ Description: Tools and widgets for the desktop data files
  This package is part of the KDE Plasma.
  .
  This package contains the data files
+
+Package: kde-touchpad
+Architecture: any
+Depends: plasma-desktop, ${misc:Depends}
+Section: oldlibs
+Priority: extra
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
+
+Package: kde-config-touchpad
+Depends: plasma-desktop, ${misc:Depends}
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
 
 Package: plasma-desktop-dbg
 Section: debug

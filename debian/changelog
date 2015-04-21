@@ -1,3 +1,9 @@
+plasma-desktop (4:5.2.95-0ubuntu1) UNRELEASED; urgency=medium
+
+  * Beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 21 Apr 2015 13:53:24 +0200
+
 plasma-desktop (4:5.2.2-0ubuntu3) vivid; urgency=medium
 
   * Add upstream_kfontinst-header-alignment.diff from upstream to fix

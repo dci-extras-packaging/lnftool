@@ -1,8 +1,9 @@
-plasma-desktop (4:5.2.95-0ubuntu1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.3.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * Beta release
+  * new upstream release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 21 Apr 2015 13:53:24 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 23 Apr 2015 17:08:09 +0200
 
 plasma-desktop (4:5.2.2-0ubuntu3) vivid; urgency=medium
 

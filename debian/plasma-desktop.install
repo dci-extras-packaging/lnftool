@@ -12,5 +12,5 @@ usr/lib/*/libexec
 usr/lib/*/libkdeinit5_kaccess.so
 usr/lib/*/qt5
 usr/share/applications/
-usr/share/config.kcfg/touchpaddaemon.kcfg
 usr/share/config.kcfg/touchpad.kcfg
+usr/share/config.kcfg/touchpaddaemon.kcfg

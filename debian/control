@@ -110,7 +110,6 @@ Recommends: bluedevil,
             fonts-oxygen,
             kde-config-gtk-style,
             kde-config-sddm,
-            kde-config-touchpad,
             kde-style-oxygen-qt5,
             khelpcenter,
             khotkeys,
@@ -130,8 +129,12 @@ Recommends: bluedevil,
             systemsettings,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
+        kde-config-touchpad,
+        kde-touchpad,
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Replaces: baloo-kf5 (<< 5.5),
+          kde-config-touchpad,
+          kde-touchpad,
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop

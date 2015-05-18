@@ -61,6 +61,9 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                qtbase5-dev (>= 5.4.0~),
                qtdeclarative5-dev (>= 5.4.0~),
                xauth,
+               xserver-xorg-dev,
+               xserver-xorg-input-evdev-dev,
+               xserver-xorg-input-synaptics-dev,
                xvfb
 Standards-Version: 3.9.6
 Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop

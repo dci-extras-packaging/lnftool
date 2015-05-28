@@ -1,3 +1,9 @@
+plasma-desktop (4:5.3.1-0ubuntu1) UNRELEASED; urgency=medium
+
+  * Vivid backport.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 27 May 2015 19:18:02 -0700
+
 plasma-desktop (4:5.3.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * Beta release

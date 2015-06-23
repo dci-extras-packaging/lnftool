@@ -1,3 +1,9 @@
+plasma-desktop (4:5.3.1-0ubuntu2) wily; urgency=medium
+
+  * Recommend renamed oxygen fonts package fonts-oxygen
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 22 Jun 2015 14:59:23 +0200
+
 plasma-desktop (4:5.3.1-0ubuntu1) wily; urgency=medium
 
   * New upstream release

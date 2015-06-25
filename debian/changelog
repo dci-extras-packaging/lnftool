@@ -1,3 +1,9 @@
+plasma-desktop (4:5.3.1-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Remove dep on plasma-nm at upstream's request
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 25 Jun 2015 12:48:15 +0200
+
 plasma-desktop (4:5.3.1-0ubuntu2) wily; urgency=medium
 
   * Recommend renamed oxygen fonts package fonts-oxygen

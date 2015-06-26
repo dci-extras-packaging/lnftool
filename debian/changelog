@@ -1,4 +1,4 @@
-plasma-desktop (4:5.3.1-0ubuntu3) UNRELEASED; urgency=medium
+plasma-desktop (4:5.3.1-0ubuntu3) wily; urgency=medium
 
   * Remove dep on plasma-nm at upstream's request
 

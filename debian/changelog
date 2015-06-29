@@ -1,3 +1,9 @@
+plasma-desktop (4:5.3.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 29 Jun 2015 17:32:59 +0200
+
 plasma-desktop (4:5.3.1-0ubuntu3) wily; urgency=medium
 
   * Remove dep on plasma-nm at upstream's request

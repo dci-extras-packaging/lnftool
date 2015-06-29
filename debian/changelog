@@ -37,6 +37,20 @@ plasma-desktop (4:5.2.2-0ubuntu2) vivid; urgency=medium
 
  -- Harald Sitter <sitter@kde.org>  Thu, 26 Mar 2015 14:21:41 +0100
 
+plasma-desktop (4:5.3.1-1~) UNRELEASED; urgency=medium
+
+  * New upstream release (5.3.0).
+  * New upstream release (5.3.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 05 Jun 2015 11:54:10 +0200
+
+plasma-desktop (4:5.2.2-1) experimental; urgency=medium
+
+  * New upstream release (5.2.1).
+  * New upstream release (5.2.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 25 Mar 2015 23:17:22 +0100
+
 plasma-desktop (4:5.2.2-0ubuntu1) vivid; urgency=medium
 
   * New upstream release
@@ -48,6 +62,17 @@ plasma-desktop (4:5.2.1-0ubuntu1) vivid; urgency=medium
   * New upstream release
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 23 Feb 2015 09:46:57 -0800
+
+plasma-desktop (4:5.2.0-1) experimental; urgency=medium
+
+  * Prepare initial Debian release.
+  * Add myself as Uploader.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Update build dependencies to build against experimental and to
+    follow cmake.
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 12 Feb 2015 22:57:30 +0100
 
 plasma-desktop (4:5.2.0-0ubuntu1) vivid; urgency=medium
 

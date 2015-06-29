@@ -1,1 +1,2 @@
-usr/lib/*/libkfontinst.so.*
+usr/lib/*/libkfontinst.so.5
+usr/lib/*/libkfontinst.so.5.*

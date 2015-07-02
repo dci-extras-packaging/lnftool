@@ -6,6 +6,45 @@ plasma-desktop (4:5.3.2-1~) UNRELEASED; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Tue, 30 Jun 2015 12:22:09 +0200
 
+plasma-desktop (4:5.3.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 29 Jun 2015 17:32:59 +0200
+
+plasma-desktop (4:5.3.1-0ubuntu3) wily; urgency=medium
+
+  * Remove dep on plasma-nm at upstream's request
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 25 Jun 2015 12:48:15 +0200
+
+plasma-desktop (4:5.3.1-0ubuntu2) wily; urgency=medium
+
+  * Recommend renamed oxygen fonts package fonts-oxygen
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 22 Jun 2015 14:59:23 +0200
+
+plasma-desktop (4:5.3.1-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 04 Jun 2015 21:08:18 +0200
+
+plasma-desktop (4:5.2.2-0ubuntu3) vivid; urgency=medium
+
+  * Add upstream_kfontinst-header-alignment.diff from upstream to fix
+    headers in kfontinst kcm
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Apr 2015 15:43:04 +0200
+
+plasma-desktop (4:5.2.2-0ubuntu2) vivid; urgency=medium
+
+  * Add upstream_Hide-pager-when-there-s-only-one-virtual-desktop.patch
+    to hide the pager applet when there is only one virtual desktop.
+    with only one desktop it is pretty useless.
+
+ -- Harald Sitter <sitter@kde.org>  Thu, 26 Mar 2015 14:21:41 +0100
+
 plasma-desktop (4:5.2.2-1) experimental; urgency=medium
 
   * New upstream release (5.2.1).

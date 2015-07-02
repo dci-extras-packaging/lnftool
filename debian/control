@@ -79,6 +79,8 @@ Depends: libkfontinst5 (= ${binary:Version}),
          plasma-desktop (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
+Replaces: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -99,9 +101,9 @@ Depends: breeze,
          oxygen-sounds,
          plasma-desktop-data (= ${source:Version}),
          plasma-framework,
-         plasma-nm,
          plasma-workspace,
          polkit-kde-agent-1,
+         qml-module-org-kde-kwindowsystem,
          qml-module-org-kde-solid,
          qtdeclarative5-kf5declarative,
          ${misc:Depends},
@@ -193,6 +195,11 @@ Description: Tools and widgets for the desktop library
 Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
+Recommends: plasma-framework,
+            plasma-workspace,
+            qml-module-org-kde-extensionplugin,
+            qml-module-org-kde-kwindowsystem,
+            qml-module-qtquick-dialogs
 Conflicts: kde-workspace-bin, kde-workspace-data
 Breaks: baloo-kf5 (<< 5.5),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
@@ -210,6 +217,22 @@ Description: Tools and widgets for the desktop data files
  This package is part of the KDE Plasma.
  .
  This package contains the data files
+
+Package: kde-touchpad
+Architecture: any
+Depends: plasma-desktop, ${misc:Depends}
+Section: oldlibs
+Priority: extra
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
+
+Package: kde-config-touchpad
+Depends: plasma-desktop, ${misc:Depends}
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
 
 Package: plasma-desktop-dbg
 Section: debug

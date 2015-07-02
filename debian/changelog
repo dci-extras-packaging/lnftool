@@ -1,8 +1,8 @@
-plasma-desktop (4:5.3.2-0ubuntu1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.3.2-0ubuntu1) wily; urgency=medium
 
   * New upstream release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 29 Jun 2015 17:32:59 +0200
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Jul 2015 12:36:43 +0000
 
 plasma-desktop (4:5.3.1-0ubuntu3) wily; urgency=medium
 

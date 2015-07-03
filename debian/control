@@ -56,7 +56,7 @@ Build-Depends: baloo-kf5-dev (>= 5.1.95),
                libxi-dev,
                libxkbfile-dev,
                openbox,
-               pkg-kde-tools (>= 0.15.15ubuntu1~),
+               pkg-kde-tools (>= 0.15.18~),
                plasma-framework-dev (>= 5.9.0~),
                plasma-workspace-dev (>= 4:5.2.2),
                qtbase5-dev (>= 5.4.0~),
@@ -202,9 +202,11 @@ Recommends: plasma-framework,
             qml-module-qtquick-dialogs
 Conflicts: kde-workspace-bin, kde-workspace-data
 Breaks: baloo-kf5 (<< 5.5),
-        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+        ${kde-l10n:all}
 Replaces: baloo-kf5 (<< 5.5),
-          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+          ${kde-l10n:all}
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.

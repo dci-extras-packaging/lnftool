@@ -7,6 +7,9 @@ plasma-desktop (4:5.3.2-1~) UNRELEASED; urgency=medium
   * Add the missing Breaks/Replaces.
   * New upstream patch: upstream-
     replace_license_reference_by_license_text
+  * New upstream approved patch (reviewboard
+    https://git.reviewboard.kde.org/r/124290/):
+    upstream_add_missing_licenses.
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 02 Jul 2015 11:15:45 +0200
 

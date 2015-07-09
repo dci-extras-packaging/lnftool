@@ -203,9 +203,11 @@ Recommends: plasma-framework,
 Conflicts: kde-workspace-bin, kde-workspace-data
 Breaks: baloo-kf5 (<< 5.5),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+        kde-config-touchpad,
         ${kde-l10n:all}
 Replaces: baloo-kf5 (<< 5.5),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+          kde-config-touchpad,
           ${kde-l10n:all}
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop

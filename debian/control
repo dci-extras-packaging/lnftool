@@ -79,8 +79,8 @@ Depends: libkfontinst5 (= ${binary:Version}),
          plasma-desktop (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
-Replaces: kde-config-touchpad (<< ${source:Version}), kde-touchpad (<< 5.1.95~)
+Breaks: kde-config-touchpad (<< 4:5), kde-touchpad (<< 5.1.95~)
+Replaces: kde-config-touchpad (<< 4:5), kde-touchpad (<< 5.1.95~)
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -131,12 +131,12 @@ Recommends: bluedevil,
             systemsettings,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
-        kde-config-touchpad,
-        kde-touchpad,
+        kde-config-touchpad (<< 4:5),
+        kde-touchpad (<< 5.1.95~),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Replaces: baloo-kf5 (<< 5.5),
-          kde-config-touchpad,
-          kde-touchpad,
+          kde-config-touchpad (<< 4:5),
+          kde-touchpad (<< 5.1.95~),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
 Conflicts: kde-workspace-bin
 Description: Tools and widgets for the desktop
@@ -203,11 +203,11 @@ Recommends: plasma-framework,
 Conflicts: kde-workspace-bin, kde-workspace-data
 Breaks: baloo-kf5 (<< 5.5),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
-        kde-config-touchpad,
+        kde-config-touchpad (<< 4:5),
         ${kde-l10n:all}
 Replaces: baloo-kf5 (<< 5.5),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
-          kde-config-touchpad,
+          kde-config-touchpad (<< 4:5),
           ${kde-l10n:all}
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop

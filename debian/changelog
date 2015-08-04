@@ -1,3 +1,10 @@
+plasma-desktop (4:5.3.2-0ubuntu4) UNRELEASED; urgency=medium
+
+  * Vivid backport. 
+  * Manual merge. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 04 Aug 2015 14:30:11 -0700
+
 plasma-desktop (4:5.3.2-0ubuntu3) wily; urgency=medium
 
   * add those breaks/replaces to plasma-desktop-data as well

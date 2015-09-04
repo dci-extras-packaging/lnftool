@@ -1,6 +1,9 @@
 plasma-desktop (4:5.4.0-1~) UNRELEASED; urgency=medium
 
   * New upstream release (5.4.0).
+  * Remove upstream patch: upstream-
+    replace_license_reference_by_license_text
+  * Remove upstream patch: upstream_add_missing_licenses
 
  -- Maximiliano Curia <maxy@debian.org>  Wed, 02 Sep 2015 23:35:53 +0200
 

@@ -1,12 +1,12 @@
 plasma-desktop (4:5.4.0-3~) UNRELEASED; urgency=medium
 
-  * 
+  * Build with -gstabs instead of -g on mips and mipsel to work around
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 05 Sep 2015 13:03:58 +0200
 
 plasma-desktop (4:5.4.0-2) unstable; urgency=medium
 
-  * Build with -gstabs instead of -g on mips and mipsel to work around
+  * Force building against the experimental version of baloo.
     virtual memory exhaustion.
 
  -- Felix Geyer <fgeyer@debian.org>  Fri, 04 Sep 2015 21:07:53 +0200

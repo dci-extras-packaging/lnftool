@@ -1,3 +1,9 @@
+plasma-desktop (4:5.4.0-3~) UNRELEASED; urgency=medium
+
+  * 
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 Sep 2015 13:03:58 +0200
+
 plasma-desktop (4:5.4.0-2) unstable; urgency=medium
 
   * Build with -gstabs instead of -g on mips and mipsel to work around

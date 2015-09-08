@@ -94,7 +94,8 @@ Description: Tools and widgets for the desktop
 
 Package: plasma-desktop
 Architecture: any
-Depends: breeze,
+Depends: baloo-kf5,
+         breeze,
          kactivities,
          kde-cli-tools,
          kded5,

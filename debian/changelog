@@ -1,3 +1,9 @@
+plasma-desktop (4:5.4.1-1~) UNRELEASED; urgency=medium
+
+  * New upstream release (5.4.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Sep 2015 14:55:15 +0200
+
 plasma-desktop (4:5.4.0-3) experimental; urgency=medium
 
   * Build with -gstabs instead of -g on mips and mipsel to work around

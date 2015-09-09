@@ -1,8 +1,8 @@
-plasma-desktop (4:5.4.1-1~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.4.1-1) unstable; urgency=medium
 
   * New upstream release (5.4.1).
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Sep 2015 14:55:15 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Sep 2015 16:36:27 +0200
 
 plasma-desktop (4:5.4.0-3) experimental; urgency=medium
 

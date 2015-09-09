@@ -26,6 +26,23 @@ plasma-desktop (4:5.4.0-1) unstable; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 04 Sep 2015 09:49:23 +0200
 
+plasma-desktop (4:5.4.0-0ubuntu1) wily; urgency=medium
+
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 31 Aug 2015 15:54:56 +0100
+
+plasma-desktop (4:5.3.95-0ubuntu1) wily; urgency=medium
+
+  [ Scarlett Clark ]
+  * Vivid backport.
+  * Manual merge.
+
+  [ Jonathan Riddell ]
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Aug 2015 23:19:44 +0200
+
 plasma-desktop (4:5.3.2-2) unstable; urgency=high
 
   * Team upload.
@@ -55,6 +72,25 @@ plasma-desktop (4:5.3.2-1) unstable; urgency=medium
     upstream_add_missing_licenses.
 
  -- Maximiliano Curia <maxy@debian.org>  Wed, 08 Jul 2015 22:33:00 +0200
+
+plasma-desktop (4:5.3.2-0ubuntu3) wily; urgency=medium
+
+  * add those breaks/replaces to plasma-desktop-data as well
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 26 Jul 2015 21:26:47 +0200
+
+plasma-desktop (4:5.3.2-0ubuntu2) wily; urgency=medium
+
+  * add versions to breaks/replaces for touchpad which have
+    transitionals
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 14 Jul 2015 23:44:09 +0200
+
+plasma-desktop (4:5.3.2-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Jul 2015 12:36:43 +0000
 
 plasma-desktop (4:5.3.1-0ubuntu3) wily; urgency=medium
 
@@ -249,7 +285,7 @@ plasma-desktop (4:4.98.0-0ubuntu1) utopic; urgency=medium
   * New upstream RC release
 
   [ Scarlett Clark ]
-  * fix install file 
+  * fix install file
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 07 Jul 2014 13:27:40 +0200
 
@@ -257,6 +293,6 @@ plasma-desktop (4:4.97.0-0ubuntu1) utopic; urgency=medium
 
   [ Scarlett Clark ]
   * Initial release.
-  * add plasma-nm networking depend 
+  * add plasma-nm networking depend
 
  -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Tue, 10 Jun 2014 10:24:08 +0100

@@ -3,10 +3,13 @@ plasma-desktop (4:5.4.1-2~) UNRELEASED; urgency=medium
   [ Scott Kitterman ]
   * Add kio to plasma-desktop depends so I/O using widgets work (Closes:
     #798664)
+  * Add qml-module-qt-labs-settings and qml-module-qt-labs-
+    folderlistmodel to plasma-desktop Depends (Closes: #799575)
+    - Thanks to Ralph Jung for the report
 
   [ Maximiliano Curia ]
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 11 Sep 2015 20:23:04 +0200
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 20 Sep 2015 12:05:13 -0400
 
 plasma-desktop (4:5.4.1-1) unstable; urgency=medium
 

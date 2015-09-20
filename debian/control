@@ -106,6 +106,8 @@ Depends: breeze,
          polkit-kde-agent-1,
          qml-module-org-kde-kwindowsystem,
          qml-module-org-kde-solid,
+         qml-module-qt-labs-folderlistmodel,
+         qml-module-qt-labs-settings,
          qtdeclarative5-kf5declarative,
          ${misc:Depends},
          ${shlibs:Depends}

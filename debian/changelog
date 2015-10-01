@@ -1,3 +1,9 @@
+plasma-desktop (4:5.4.2-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Thu, 01 Oct 2015 07:32:14 -0700
+
 plasma-desktop (4:5.4.1-0ubuntu2) wily; urgency=medium
 
   * Add build-dep on libpackagekitqt5-dev

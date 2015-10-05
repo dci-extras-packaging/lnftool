@@ -1,3 +1,10 @@
+plasma-desktop (4:5.4.2-0ubuntu2) wily; urgency=medium
+
+  * Add 0001-add-discover-to-favorties.patch from upstream to add Muon
+    favourites
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 05 Oct 2015 15:15:17 +0100
+
 plasma-desktop (4:5.4.2-0ubuntu1) wily; urgency=medium
 
   * New upstream release

@@ -1,4 +1,4 @@
-plasma-desktop (4:5.4.2-1~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.4.2-1) unstable; urgency=medium
 
   [ Scott Kitterman ]
   * Add kio to plasma-desktop depends so I/O using widgets work (Closes:
@@ -12,7 +12,7 @@ plasma-desktop (4:5.4.2-1~) UNRELEASED; urgency=medium
     Thorsten Glaser
   * New upstream release (5.4.2).
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 01 Oct 2015 17:32:35 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 06 Oct 2015 07:51:52 +0200
 
 plasma-desktop (4:5.4.1-1) unstable; urgency=medium
 

@@ -1,3 +1,9 @@
+plasma-desktop (4:5.4.3-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 09 Nov 2015 18:31:30 -0800
+
 plasma-desktop (4:5.4.2-0ubuntu2) wily; urgency=medium
 
   * Add 0001-add-discover-to-favorties.patch from upstream to add Muon

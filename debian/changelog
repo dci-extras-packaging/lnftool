@@ -1,8 +1,9 @@
-plasma-desktop (4:5.5.0-1~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.5.1-1~) UNRELEASED; urgency=medium
 
   * New upstream release (5.5.0).
+  * New upstream release (5.5.1).
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 10 Dec 2015 14:03:33 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 15 Dec 2015 17:11:21 +0100
 
 plasma-desktop (4:5.4.3-1) unstable; urgency=medium
 

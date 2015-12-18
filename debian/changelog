@@ -1,3 +1,9 @@
+plasma-desktop (4:5.5.1-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release Xenial
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 18 Dec 2015 09:13:44 -0800
+
 plasma-desktop (4:5.4.3-0ubuntu1) xenial; urgency=medium
 
   [ Scarlett Clark ]

@@ -6,6 +6,9 @@ plasma-desktop (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
   [ Clive Johnston ]
   * new upstream release
 
+  [ Philip Muškovac ]
+  * plasma-desktop-data breaks/replaces kde-l10n:all << 4:15.08.3-0ubuntu1~
+
  -- Clive Johnston <clivejo@aol.com>  Tue, 29 Dec 2015 17:50:46 +0000
 
 plasma-desktop (4:5.4.3-0ubuntu1) xenial; urgency=medium

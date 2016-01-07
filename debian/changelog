@@ -1,4 +1,4 @@
-plasma-desktop (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.5.3-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Scarlett Clark ]
   * New upstream release Xenial
@@ -10,7 +10,10 @@ plasma-desktop (4:5.5.2-0ubuntu1) UNRELEASED; urgency=medium
   * plasma-desktop-data breaks/replaces kde-l10n:all << 4:15.08.3-0ubuntu1~
   * Build-depend on pkg-kde-tools >= 0.15.18 for l10n-packages.mk support
 
- -- Clive Johnston <clivejo@aol.com>  Tue, 29 Dec 2015 17:50:46 +0000
+  [ Clive Johnston ]
+  * New upstream release
+
+ -- Clive Johnston <clivejo@aol.com>  Thu, 07 Jan 2016 17:59:40 +0000
 
 plasma-desktop (4:5.4.3-0ubuntu1) xenial; urgency=medium
 

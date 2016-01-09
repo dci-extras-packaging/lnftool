@@ -13,6 +13,10 @@ plasma-desktop (4:5.5.3-0ubuntu1) UNRELEASED; urgency=medium
   [ Clive Johnston ]
   * New upstream release
 
+  [ Philip Muškovac ]
+  * Rename the pam-kwallet recommends to libpam-kwallet as the packages were
+    renamed
+
  -- Clive Johnston <clivejo@aol.com>  Thu, 07 Jan 2016 17:59:40 +0000
 
 plasma-desktop (4:5.4.3-0ubuntu1) xenial; urgency=medium

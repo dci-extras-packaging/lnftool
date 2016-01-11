@@ -9,11 +9,6 @@ plasma-desktop (4:5.5.3-0ubuntu1) UNRELEASED; urgency=medium
   [ Philip Muškovac ]
   * plasma-desktop-data breaks/replaces kde-l10n:all << 4:15.08.3-0ubuntu1~
   * Build-depend on pkg-kde-tools >= 0.15.18 for l10n-packages.mk support
-
-  [ Clive Johnston ]
-  * New upstream release
-
-  [ Philip Muškovac ]
   * Rename the pam-kwallet recommends to libpam-kwallet as the packages were
     renamed
 

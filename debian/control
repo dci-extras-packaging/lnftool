@@ -126,6 +126,7 @@ Depends: breeze,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: bluedevil,
+            fonts-noto,
             fonts-oxygen,
             kde-config-gtk-style,
             kde-config-sddm,

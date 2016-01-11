@@ -114,6 +114,7 @@ Depends: baloo-kf5,
          ${shlibs:Depends}
 Recommends: bluedevil,
             discover | muon-discover,
+            fonts-noto,
             fonts-oxygen,
             kde-config-gtk-style,
             kde-config-screenlocker,

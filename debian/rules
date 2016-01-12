@@ -1,7 +1,15 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-l10npkgs_firstversion_ok := 4:15.08.3-0ubuntu2~
+l10npkgs_firstversion_ok := 4:4.14.0-2
+
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+ifneq (,$(filter $(DEB_HOST_ARCH), mips mipsel))
+    export DEB_CFLAGS_MAINT_STRIP = -g
+    export DEB_CXXFLAGS_MAINT_STRIP = -g
+    export DEB_CFLAGS_MAINT_APPEND = -gstabs
+    export DEB_CXXFLAGS_MAINT_APPEND = -gstabs
+endif
 
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 include /usr/share/pkg-kde-tools/qt-kde-team/2/l10n-packages.mk

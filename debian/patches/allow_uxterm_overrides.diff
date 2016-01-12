@@ -1,0 +1,31 @@
+Description: Allow xterm/uxterm resources overrides
+ Using the lower case instance refers to application name instead to the
+ window class and has higher priority than setting the window class. This
+ prohibits the use of different classes for the same application, something
+ used by the xterm/uxterm users.
+ .
+ This changes the resource mangling to just set the default classes allowing
+ the users to override them.
+Author: Thorsten Glaser <tg@mirbsd.de>
+Bug-Debian: https://bugs.debian.org/797482
+Forwarded: no
+Reviewed-by: Maximiliano Curia
+Last-Update: 2015-09-15
+---
+Index: plasma-desktop/kcms/krdb/ad/XTerm.ad
+===================================================================
+--- plasma-desktop.orig/kcms/krdb/ad/XTerm.ad	2015-09-11 18:00:30.641665196 +0200
++++ plasma-desktop/kcms/krdb/ad/XTerm.ad	2015-09-15 10:39:45.660667501 +0200
+@@ -1,4 +1,8 @@
+-xterm*background: WINDOW_BACKGROUND
+-xterm*foreground: WINDOW_FOREGROUND
+-xterm.SimpleMenu*background: BACKGROUND
+-xterm.SimpleMenu*foreground: FOREGROUND
++Xterm*background: WINDOW_BACKGROUND
++Xterm*foreground: WINDOW_FOREGROUND
++Xterm.SimpleMenu*background: BACKGROUND
++Xterm.SimpleMenu*foreground: FOREGROUND
++UXterm*background: WINDOW_BACKGROUND
++UXterm*foreground: WINDOW_FOREGROUND
++UXterm.SimpleMenu*background: BACKGROUND
++UXterm.SimpleMenu*foreground: FOREGROUND

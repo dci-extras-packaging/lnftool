@@ -11,7 +11,6 @@ plasma-desktop (4:5.5.3-0ubuntu1) UNRELEASED; urgency=medium
   * Build-depend on pkg-kde-tools >= 0.15.18 for l10n-packages.mk support
   * Rename the pam-kwallet recommends to libpam-kwallet as the packages were
     renamed
-  * Cherry pick upstream_fix_panel_shrinking.diff from git
 
   [ Scarlett Clark ]
   * Debian merge, No remaining changes. 

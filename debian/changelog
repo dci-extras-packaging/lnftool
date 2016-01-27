@@ -3,9 +3,6 @@ plasma-desktop (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
   [ Scarlett Clark ]
   * New upstream release Xenial
 
-  [ Clive Johnston ]
-  * new upstream release
-
   [ Philip Muškovac ]
   * plasma-desktop-data breaks/replaces kde-l10n:all << 4:15.08.3-0ubuntu2~
   * Build-depend on pkg-kde-tools >= 0.15.18 for l10n-packages.mk support
@@ -21,6 +18,7 @@ plasma-desktop (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
 
   [ Clive Johnston ]
   * New upstream release
+  * Removing patch upstream_fix_panel_shrinking.diff as it is now fixed in 5.5.4
 
  -- Clive Johnston <clivejo@aol.com>  Wed, 27 Jan 2016 20:16:04 +0000
 

@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-l10npkgs_firstversion_ok := 4:4.14.0-2
+l10npkgs_firstversion_ok := 4:4.14.0-4~
 
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 ifneq (,$(filter $(DEB_HOST_ARCH), mips mipsel))

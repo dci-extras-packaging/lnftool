@@ -1,11 +1,12 @@
-plasma-desktop (4:5.5.4-2~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.5.5-1~) UNRELEASED; urgency=medium
 
   * Drop libusb-dev build dependency. (Closes: #810452) Thanks to Aurelien Jarno
   * Bump breaks/replaces for l10n packages, due to the addition of
     kcm_device_automounter.mo. (Closes: #814526) Thanks to Andreas
     Beckmann
+  * New upstream release (5.5.5).
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 05 Feb 2016 11:54:17 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 01 Mar 2016 17:09:54 +0100
 
 plasma-desktop (4:5.5.4-1) experimental; urgency=medium
 

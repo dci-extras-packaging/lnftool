@@ -15,7 +15,7 @@ include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 include /usr/share/pkg-kde-tools/qt-kde-team/2/l10n-packages.mk
 
 override_dh_strip:
-	$(overridden_command) --dbg-package=plasma-desktop-dbg
+	$(overridden_command) --dbgsym-migration='plasma-desktop-dbg (<= 4:5.5.5-1~~)'
 
 override_dh_auto_test:
 	# Disable dh_auto_test, fourth test never ends

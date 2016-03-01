@@ -20,6 +20,9 @@ plasma-desktop (4:5.5.4-0ubuntu1) UNRELEASED; urgency=medium
   * New upstream release
   * Removing patch upstream_fix_panel_shrinking.diff as it is now fixed in 5.5.4
 
+  [ Scarlett Clark ]
+  * Add breaks/replaces for new conflicting files due to kactivities split. 
+
  -- Clive Johnston <clivejo@aol.com>  Wed, 27 Jan 2016 20:16:04 +0000
 
 plasma-desktop (4:5.4.3-2) UNRELEASED; urgency=medium

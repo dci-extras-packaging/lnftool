@@ -1,6 +1,19 @@
 From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Date: Wed, 6 Apr 2016 23:57:23 +0200
 Subject: allow_uxterm_overrides
+Description: Allow xterm/uxterm resources overrides
+ Using the lower case instance refers to application name instead to the
+ window class and has higher priority than setting the window class. This
+ prohibits the use of different classes for the same application, something
+ used by the xterm/uxterm users.
+ .
+ This changes the resource mangling to just set the default classes allowing
+ the users to override them.
+Author: Thorsten Glaser <tg@mirbsd.de>
+Bug-Debian: https://bugs.debian.org/797482
+Forwarded: no
+Reviewed-by: Maximiliano Curia
+Last-Update: 2015-09-15
 
 ---
  kcms/krdb/ad/XTerm.ad | 12 ++++++++----

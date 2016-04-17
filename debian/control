@@ -98,7 +98,6 @@ Description: Tools and widgets for the desktop
 Package: plasma-desktop
 Architecture: any
 Depends: breeze,
-         kactivities,
          kde-cli-tools,
          kded5,
          kio,
@@ -143,19 +142,23 @@ Recommends: bluedevil,
             systemsettings,
             user-manager
 Breaks: baloo-kf5 (<< 5.5),
+        kactivities,
         kde-config-touchpad (<< 4:5),
         kde-touchpad (<< 5.1.95~),
         kde-workspace-bin,
         kde-workspace-data,
         plasma-desktop-data (<< 4:5.3.2-0ubuntu1~),
-        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+        plasma-widget-kimpanel
 Replaces: baloo-kf5 (<< 5.5),
+          kactivities,
           kde-config-touchpad (<< 4:5),
           kde-touchpad (<< 5.1.95~),
           kde-workspace-bin,
           kde-workspace-data,
           plasma-desktop-data (<< 4:5.3.2-0ubuntu1~),
-          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8)
+          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+          plasma-widget-kimpanel
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -218,18 +221,24 @@ Recommends: plasma-framework,
             qml-module-org-kde-kwindowsystem,
             qml-module-qtquick-dialogs
 Breaks: baloo-kf5 (<< 5.5),
+        kactivities,
         kde-config-touchpad (<< 4:5),
         kde-touchpad (<< 5.1.95~),
         kde-workspace-bin,
         kde-workspace-data,
+        kdeplasma-addons-data (<< 4:5.6~),
         plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+        plasma-widget-kimpanel,
         ${kde-l10n:all}
 Replaces: baloo-kf5 (<< 5.5),
+          kactivities,
           kde-config-touchpad (<< 4:5),
           kde-touchpad (<< 5.1.95~),
           kde-workspace-bin,
           kde-workspace-data,
+          kdeplasma-addons-data (<< 4:5.6~),
           plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
+          plasma-widget-kimpanel,
           ${kde-l10n:all}
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop

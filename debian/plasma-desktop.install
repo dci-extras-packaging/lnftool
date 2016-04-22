@@ -4,6 +4,7 @@ etc/xdg/colorschemes.knsrc
 etc/xdg/emoticons.knsrc
 etc/xdg/icons.knsrc
 etc/xdg/kfontinst.knsrc
+etc/xdg/plasma-themes.knsrc
 etc/xdg/xcursor.knsrc
 usr/bin/
 usr/lib/*/kconf_update_bin

@@ -1,0 +1,10 @@
+--- a/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
++++ b/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
+@@ -48,6 +48,7 @@
+ 
+ #include <QDebug>
+ 
++#include <cmath>
+ #include "synapticstouchpad.h"
+ 
+ #include <stddef.h>

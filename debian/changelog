@@ -1,6 +1,6 @@
-plasma-desktop (4:5.6.3-1~1.gbpb4df7e) UNRELEASED; urgency=medium
+plasma-desktop (4:5.6.3-1~2.gbp0160f7) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @b4df7e4ccfe14f632e9557c4d9761a4c14a0827f **
+  ** SNAPSHOT build @0160f7f55da644f08065b52b73871ab537951869 **
 
   [ Maximiliano Curia ]
   * Drop libusb-dev build dependency. (Closes: #810452) Thanks to Aurelien Jarno
@@ -12,6 +12,7 @@ plasma-desktop (4:5.6.3-1~1.gbpb4df7e) UNRELEASED; urgency=medium
   * Automatic update with ddeb_migration3.py
   * Add upstream metadata (DEP-12)
   * Add missing breaks/replaces
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
 
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
@@ -19,7 +20,7 @@ plasma-desktop (4:5.6.3-1~1.gbpb4df7e) UNRELEASED; urgency=medium
   * Bump Standards-Version to 3.9.8
   * Refresh patches
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 19 Apr 2016 16:58:05 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 09 May 2016 11:57:25 +0200
 
 plasma-desktop (4:5.5.5-1~) UNRELEASED; urgency=medium
 

@@ -1,3 +1,13 @@
+From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Date: Tue, 10 May 2016 22:58:31 +0200
+Subject: add_missing_include
+
+---
+ kcms/touchpad/src/backends/x11/synapticstouchpad.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp b/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
+index d4742bf..8764e2e 100644
 --- a/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
 +++ b/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
 @@ -48,6 +48,7 @@

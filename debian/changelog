@@ -1,6 +1,6 @@
-plasma-desktop (4:5.6.3-1~3.gbp35ea4f) UNRELEASED; urgency=medium
+plasma-desktop (4:5.6.4-1~1.gbp993854) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @35ea4f6d5f4d7141852e68235e84a3065b2da010 **
+  ** SNAPSHOT build @99385449bd75ad98283e924e5e7d5ae8814aaeea **
 
   [ Maximiliano Curia ]
   * Drop libusb-dev build dependency. (Closes: #810452) Thanks to Aurelien Jarno
@@ -20,8 +20,9 @@ plasma-desktop (4:5.6.3-1~3.gbp35ea4f) UNRELEASED; urgency=medium
   * Refresh patches
   * Bump Standards-Version to 3.9.8
   * Refresh patches
+  * Refresh patches
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 09 May 2016 21:35:53 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 10 May 2016 22:58:35 +0200
 
 plasma-desktop (4:5.5.4-1) experimental; urgency=medium
 

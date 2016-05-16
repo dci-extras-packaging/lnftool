@@ -1,6 +1,6 @@
-plasma-desktop (4:5.6.4-1~1.gbp993854) UNRELEASED; urgency=medium
+plasma-desktop (4:5.6.4-1~2.gbpe2d7e1) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @99385449bd75ad98283e924e5e7d5ae8814aaeea **
+  ** SNAPSHOT build @e2d7e1d30309693459ebd7cfe1510d6e353c3d48 **
 
   [ Maximiliano Curia ]
   * Drop libusb-dev build dependency. (Closes: #810452) Thanks to Aurelien Jarno
@@ -14,6 +14,8 @@ plasma-desktop (4:5.6.4-1~1.gbp993854) UNRELEASED; urgency=medium
   * Add missing breaks/replaces
   * debian/control: Update Vcs-Browser and Vcs-Git fields
   * Add new patch: add_missing_include
+  * Use the right kwallet pam package name
+  * Add lintian-overrides for libkdeinit5_kaccess.so
 
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
@@ -22,7 +24,7 @@ plasma-desktop (4:5.6.4-1~1.gbp993854) UNRELEASED; urgency=medium
   * Refresh patches
   * Refresh patches
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 10 May 2016 22:58:35 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 16 May 2016 15:57:19 +0200
 
 plasma-desktop (4:5.5.4-1) experimental; urgency=medium
 

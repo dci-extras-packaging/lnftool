@@ -1,0 +1,33 @@
+commit 0e405ee75af7d9d699a14c6ae32831f137f3e5ce
+Author: Jonathan Riddell <jr@jriddell.org>
+Date:   Fri May 6 13:28:52 2016 +0100
+
+    Don't show knetattach in the menu, it's only useful from within a file manager/dialog
+    
+    Summary:
+    knetattach is used by the remote:/ kioslave as a UI to add a new entry to a remote folder, it can be called (or should be this seems to have broken to some extent) from within Dolphin or within a file open/save dialogue.  It's not useful to call it from the app menu as it just disappears and shows to context to the user
+    
+    Test Plan:
+    install and check running from dolphin, file open/close and not from kickoff menu
+    
+    Reviewers: #plasma, mart
+    
+    Reviewed By: mart
+    
+    Subscribers: broulik, andreaska, plasma-devel
+    
+    Projects: #plasma
+    
+    Differential Revision: https://phabricator.kde.org/D1539
+
+diff --git a/knetattach/org.kde.knetattach.desktop b/knetattach/org.kde.knetattach.desktop
+index 110dc73..b5c743b 100755
+--- a/knetattach/org.kde.knetattach.desktop
++++ b/knetattach/org.kde.knetattach.desktop
+@@ -183,5 +183,5 @@ Terminal=false
+ X-KDE-StartupNotify=true
+ Categories=Qt;KDE;Network;RemoteAccess;
+ X-DocPath=knetattach/index.html
+-OnlyShowIn=KDE;
++NoDisplay=true
+ X-DBUS-ServiceName=org.kde.knetattach

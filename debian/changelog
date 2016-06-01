@@ -1,6 +1,4 @@
-plasma-desktop (4:5.6.4-1~2.gbpe2d7e1) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @e2d7e1d30309693459ebd7cfe1510d6e353c3d48 **
+plasma-desktop (4:5.6.4-1) unstable; urgency=medium
 
   [ Maximiliano Curia ]
   * Drop libusb-dev build dependency. (Closes: #810452) Thanks to Aurelien Jarno
@@ -16,15 +14,14 @@ plasma-desktop (4:5.6.4-1~2.gbpe2d7e1) UNRELEASED; urgency=medium
   * Add new patch: add_missing_include
   * Use the right kwallet pam package name
   * Add lintian-overrides for libkdeinit5_kaccess.so
+  * Recommend plasma-integration, without it the plasma widgets use the wrong font sizes
 
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
   * Refresh patches
   * Bump Standards-Version to 3.9.8
-  * Refresh patches
-  * Refresh patches
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 16 May 2016 15:57:19 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 01 Jun 2016 11:16:31 +0200
 
 plasma-desktop (4:5.5.4-1) experimental; urgency=medium
 

@@ -1,13 +1,11 @@
-plasma-desktop (4:5.6.4-2~2.gbp30849e) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @30849e178f5ea313cb0729c6e6887d30a0f16217 **
+plasma-desktop (4:5.6.4-2) unstable; urgency=high
 
   * Recommend kactivitymanagerd.
     Thanks to Martin Steigerwald for reporting (Closes: 826047)
   * Promote kactivitymanagerd to dependency
   * Bump plasma-framework dependency version
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Fri, 03 Jun 2016 15:10:37 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 03 Jun 2016 21:20:16 +0200
 
 plasma-desktop (4:5.6.4-1) unstable; urgency=medium
 

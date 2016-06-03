@@ -98,6 +98,7 @@ Description: Tools and widgets for the desktop
 Package: plasma-desktop
 Architecture: any
 Depends: breeze,
+         kactivitymanagerd,
          kde-cli-tools,
          kded5,
          kio,
@@ -118,7 +119,6 @@ Depends: breeze,
          ${shlibs:Depends}
 Recommends: bluedevil,
             fonts-oxygen,
-            kactivitymanagerd,
             kde-config-gtk-style,
             kde-config-sddm,
             kde-style-oxygen-qt5,

@@ -1,3 +1,11 @@
+plasma-desktop (4:5.6.4-3~1.gbpad957f) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @ad957f3ca681cd8c1c66fab82bb22ab63e27b547 **
+
+  * Promote plasma-integration to a hard dependency
+
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sun, 05 Jun 2016 12:57:18 +0200
+
 plasma-desktop (4:5.6.4-2) unstable; urgency=high
 
   * Recommend kactivitymanagerd.

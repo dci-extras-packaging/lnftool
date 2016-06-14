@@ -7,11 +7,11 @@ Subject: add_missing_include
  1 file changed, 1 insertion(+)
 
 diff --git a/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp b/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
-index d4742bf..8764e2e 100644
+index eb222ae..be617c8 100644
 --- a/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
 +++ b/kcms/touchpad/src/backends/x11/synapticstouchpad.cpp
-@@ -48,6 +48,7 @@
- 
+@@ -49,6 +49,7 @@
+ #include <cmath>
  #include <QDebug>
  
 +#include <cmath>

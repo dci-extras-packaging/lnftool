@@ -1,16 +1,12 @@
-plasma-desktop (4:5.6.5-1~1.gbp40caa5) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @40caa5d04d4625a2c26e43e49fb01fadc793d1ea **
+plasma-desktop (4:5.6.5-1) unstable; urgency=medium
 
   [ Maximiliano Curia ]
-  ** SNAPSHOT build @ad957f3ca681cd8c1c66fab82bb22ab63e27b547 **
-
   * Promote plasma-integration to a hard dependency
 
   [ Automatic packaging ]
   * Refresh patches
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 14 Jun 2016 16:57:48 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 29 Jun 2016 17:42:33 +0200
 
 plasma-desktop (4:5.6.4-2) unstable; urgency=high
 

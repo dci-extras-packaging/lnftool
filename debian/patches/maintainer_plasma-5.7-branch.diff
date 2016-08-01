@@ -1,0 +1,569 @@
+diff --git a/applets/kicker/package/contents/ui/ItemListDelegate.qml b/applets/kicker/package/contents/ui/ItemListDelegate.qml
+index 4a5e856..261c14a 100644
+--- a/applets/kicker/package/contents/ui/ItemListDelegate.qml
++++ b/applets/kicker/package/contents/ui/ItemListDelegate.qml
+@@ -119,6 +119,7 @@ Item {
+         onPositionChanged: {
+             if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                 dragHelper.startDrag(kicker, model.url, model.decoration);
++                pressed = false;
+                 pressX = -1;
+                 pressY = -1;
+ 
+diff --git a/applets/kicker/package/contents/ui/SideBarItem.qml b/applets/kicker/package/contents/ui/SideBarItem.qml
+index 9851a9a..febf445 100644
+--- a/applets/kicker/package/contents/ui/SideBarItem.qml
++++ b/applets/kicker/package/contents/ui/SideBarItem.qml
+@@ -121,6 +121,7 @@ Item {
+             if (pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                 kicker.dragSource = item;
+                 dragHelper.startDrag(kicker, model.url, model.icon);
++                pressed = false;
+                 pressX = -1;
+                 pressY = -1;
+ 
+diff --git a/applets/kicker/package/metadata.desktop b/applets/kicker/package/metadata.desktop
+index 222ee06..8fdda03 100644
+--- a/applets/kicker/package/metadata.desktop
++++ b/applets/kicker/package/metadata.desktop
+@@ -10,6 +10,7 @@ Name[da]=Startmenu
+ Name[de]=Anwendungsmenü
+ Name[el]=Μενού εφαρμογών
+ Name[en_GB]=Application Menu
++Name[eo]=Aplikaĵomenuo
+ Name[es]=Menú de aplicaciones
+ Name[et]=Rakenduste menüü
+ Name[fi]=Sovelluskäynnistin
+diff --git a/applets/kicker/plugin/appentry.cpp b/applets/kicker/plugin/appentry.cpp
+index 298d5c5..ee2a2d3 100644
+--- a/applets/kicker/plugin/appentry.cpp
++++ b/applets/kicker/plugin/appentry.cpp
+@@ -17,6 +17,7 @@
+  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+  ***************************************************************************/
+ 
++#include <config-workspace.h>
+ #include "appentry.h"
+ #include "actionlist.h"
+ #include "appsmodel.h"
+diff --git a/applets/kimpanel/package/metadata.desktop b/applets/kimpanel/package/metadata.desktop
+index 8ad6881..fec2fce 100644
+--- a/applets/kimpanel/package/metadata.desktop
++++ b/applets/kimpanel/package/metadata.desktop
+@@ -9,6 +9,7 @@ Name[de]=Eingabemethoden
+ Name[el]=Πλαίσιο μεθόδου εισαγωγής
+ Name[en_GB]=Input Method Panel
+ Name[es]=Panel del método de entrada
++Name[et]=Sisestusviisi paneel
+ Name[fi]=Syöte­menetelmä­paneeli
+ Name[fr]=Panneau de méthode de saisie
+ Name[gl]=Panel de métodos de entrada
+@@ -43,6 +44,7 @@ Comment[de]=Ein allgemeines Eingabemethoden-Miniprogramm
+ Comment[el]=Ένα γενικό πλαίσιο μεθόδου εισαγωγής
+ Comment[en_GB]=A generic input method panel
+ Comment[es]=Un panel de método de entrada genérico
++Comment[et]=Üldine sisestusviisi paneel
+ Comment[fi]=Yleinen syöte­menetelmä­paneeli
+ Comment[fr]=Un panneau générique pour les méthodes de saisie
+ Comment[gl]=Un panel de métodos de entrada xenérico
+@@ -76,6 +78,7 @@ Keywords[de]=Input;IM;
+ Keywords[el]=Είσοδος;IM;
+ Keywords[en_GB]=Input;IM;
+ Keywords[es]=Entrada;ME;
++Keywords[et]=Sisestusviis;IM;
+ Keywords[fi]=Input;IM;Syöte;Syötemenetelmä;
+ Keywords[fr]=Entrée;Méthode de saisie
+ Keywords[gl]=Entrada;ME;Input;IM;
+diff --git a/applets/taskmanager/package/contents/config/main.xml b/applets/taskmanager/package/contents/config/main.xml
+index 6082f45..a68bef4 100644
+--- a/applets/taskmanager/package/contents/config/main.xml
++++ b/applets/taskmanager/package/contents/config/main.xml
+@@ -70,6 +70,9 @@
+     <entry name="smartLaunchersEnabled" type="Bool">
+       <default>true</default>
+     </entry>
++    <entry name="experimentalQmlTextLabel" type="Bool">
++      <default>false</default>
++    </entry>
+   </group>
+ 
+ </kcfg>
+diff --git a/applets/taskmanager/package/contents/ui/CppTextLabel.qml b/applets/taskmanager/package/contents/ui/CppTextLabel.qml
+new file mode 100644
+index 0000000..aca6f9a
+--- /dev/null
++++ b/applets/taskmanager/package/contents/ui/CppTextLabel.qml
+@@ -0,0 +1,30 @@
++/***************************************************************************
++ *   Copyright (C) 2016 by Eike Hein <hein@kde.org>                   *
++ *                                                                         *
++ *   This program is free software; you can redistribute it and/or modify  *
++ *   it under the terms of the GNU General Public License as published by  *
++ *   the Free Software Foundation; either version 2 of the License, or     *
++ *   (at your option) any later version.                                   *
++ *                                                                         *
++ *   This program is distributed in the hope that it will be useful,       *
++ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
++ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
++ *   GNU General Public License for more details.                          *
++ *                                                                         *
++ *   You should have received a copy of the GNU General Public License     *
++ *   along with this program; if not, write to the                         *
++ *   Free Software Foundation, Inc.,                                       *
++ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
++ ***************************************************************************/
++
++import QtQuick 2.0
++
++import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
++
++TaskManagerApplet.TextLabel {
++    anchors.fill: parent
++
++    text: model.display
++    color: theme.textColor
++    elide: !inPopup
++}
+diff --git a/applets/taskmanager/package/contents/ui/QmlTextLabel.qml b/applets/taskmanager/package/contents/ui/QmlTextLabel.qml
+new file mode 100644
+index 0000000..6312a84
+--- /dev/null
++++ b/applets/taskmanager/package/contents/ui/QmlTextLabel.qml
+@@ -0,0 +1,32 @@
++/***************************************************************************
++ *   Copyright (C) 2016 by Eike Hein <hein@kde.org>                   *
++ *                                                                         *
++ *   This program is free software; you can redistribute it and/or modify  *
++ *   it under the terms of the GNU General Public License as published by  *
++ *   the Free Software Foundation; either version 2 of the License, or     *
++ *   (at your option) any later version.                                   *
++ *                                                                         *
++ *   This program is distributed in the hope that it will be useful,       *
++ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
++ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
++ *   GNU General Public License for more details.                          *
++ *                                                                         *
++ *   You should have received a copy of the GNU General Public License     *
++ *   along with this program; if not, write to the                         *
++ *   Free Software Foundation, Inc.,                                       *
++ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
++ ***************************************************************************/
++
++import QtQuick 2.0
++
++import org.kde.plasma.components 2.0 as PlasmaComponents
++
++PlasmaComponents.Label {
++    anchors.fill: parent
++
++    text: model.display
++    wrapMode: Text.Wrap
++    elide: Text.ElideRight
++    textFormat: Text.PlainText
++    verticalAlignment: Text.AlignVCenter
++}
+diff --git a/applets/taskmanager/package/contents/ui/Task.qml b/applets/taskmanager/package/contents/ui/Task.qml
+index 19d7113..298e5c4 100644
+--- a/applets/taskmanager/package/contents/ui/Task.qml
++++ b/applets/taskmanager/package/contents/ui/Task.qml
+@@ -44,7 +44,7 @@ MouseArea {
+     property int itemIndex: index
+     property bool inPopup: false
+     property bool initialGeometryExported: false
+-    property int textWidth: label.implicitWidth
++    property alias textWidth: label.implicitTextWidth
+     property bool pressed: false
+     property int pressX: -1
+     property int pressY: -1
+@@ -54,7 +54,7 @@ MouseArea {
+     property QtObject smartLauncherItem: null
+ 
+     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
+-    hoverEnabled: true
++    hoverEnabled: initialGeometryExported
+ 
+     onVisibleChanged: {
+         if (visible && model.IsWindow === true && itemIndex == 0) {
+@@ -358,16 +358,25 @@ MouseArea {
+             }
+         ]
+ 
+-        Component.onCompleted: {
+-            if (model.IsStartup === true) {
+-                Qt.createQmlObject("import org.kde.plasma.components 2.0 as PC; PC.BusyIndicator { anchors.fill: parent }", iconBox);
+-            }
++        Loader {
++            anchors.fill: parent
++
++            active: model.IsStartup === true
++            sourceComponent: busyIndicator
++        }
++
++        Component {
++            id: busyIndicator
++
++            PlasmaComponents.BusyIndicator { anchors.fill: parent }
+         }
+     }
+ 
+-    TaskManagerApplet.TextLabel {
++    Loader {
+         id: label
+ 
++        property int implicitTextWidth: label.item ? label.item.implicitWidth : 0
++
+         anchors {
+             fill: parent
+             leftMargin: taskFrame.margins.left + iconBox.width + units.smallSpacing
+@@ -379,11 +388,10 @@ MouseArea {
+         visible: (inPopup || !iconsOnly && model.IsLauncher !== true
+             && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
+ 
+-        enabled: true
++        active: inPopup || !iconsOnly
++        asynchronous: true
+ 
+-        text: (!inPopup && iconsOnly) ? "" : model.display
+-        color: theme.textColor
+-        elide: !inPopup
++        source: plasmoid.configuration.experimentalQmlTextLabel ? "QmlTextLabel.qml" : "CppTextLabel.qml"
+     }
+ 
+     states: [
+diff --git a/applets/taskmanager/package/contents/ui/main.qml b/applets/taskmanager/package/contents/ui/main.qml
+index b4e59f2..c6eb1b0 100644
+--- a/applets/taskmanager/package/contents/ui/main.qml
++++ b/applets/taskmanager/package/contents/ui/main.qml
+@@ -95,7 +95,7 @@ Item {
+             : sortModeEnumValue(plasmoid.configuration.sortingStrategy)
+         launchInPlace: iconsOnly
+         separateLaunchers: {
+-            if (!iconsOnly && !plasmoid.configuration.seperateLaunchers
++            if (!iconsOnly && !plasmoid.configuration.separateLaunchers
+                 && plasmoid.configuration.sortingStrategy == 1) {
+                 return false;
+             }
+diff --git a/applets/window-list/metadata.desktop b/applets/window-list/metadata.desktop
+index 5a65b80..7782d43 100644
+--- a/applets/window-list/metadata.desktop
++++ b/applets/window-list/metadata.desktop
+@@ -11,6 +11,7 @@ Name[da]=Vinduesliste
+ Name[de]=Fensterliste
+ Name[el]=Λίστα παραθύρων
+ Name[en_GB]=Window list
++Name[eo]=Fenestra listo
+ Name[es]=Lista de ventanas
+ Name[et]=Akende nimekiri
+ Name[eu]=Leiho-zerrenda
+diff --git a/containments/desktop/plugins/folder/foldermodel.cpp b/containments/desktop/plugins/folder/foldermodel.cpp
+index de234a6..f4529e1 100644
+--- a/containments/desktop/plugins/folder/foldermodel.cpp
++++ b/containments/desktop/plugins/folder/foldermodel.cpp
+@@ -448,6 +448,8 @@ void FolderModel::setFilterPattern(const QString &pattern)
+         m_regExps.append(rx);
+     }
+ 
++    invalidateFilter();
++
+     emit filterPatternChanged();
+ }
+ 
+diff --git a/dataengines/kimpanel/plasma-dataengine-kimpanel.desktop b/dataengines/kimpanel/plasma-dataengine-kimpanel.desktop
+index 4c2a461..5d16f3b 100644
+--- a/dataengines/kimpanel/plasma-dataengine-kimpanel.desktop
++++ b/dataengines/kimpanel/plasma-dataengine-kimpanel.desktop
+@@ -8,6 +8,7 @@ Name[de]=Datenmodul für Kimpanel
+ Name[el]=Μηχανή δεδομένων για το Kimpanel
+ Name[en_GB]=DataEngine for Kimpanel
+ Name[es]=Motor de datos para Kimpanel
++Name[et]=Kimpaneli andmemootor
+ Name[fi]=Tietomoottori Kimpaneliin
+ Name[fr]=Moteur de données pour Kimpanel
+ Name[gl]=Un motor de datos para Kimpanel.
+@@ -41,6 +42,7 @@ Comment[de]=Datenmodul für Kimpanel
+ Comment[el]=Μηχανή δεδομένων για το Kimpanel
+ Comment[en_GB]=DataEngine for Kimpanel
+ Comment[es]=Motor de datos para Kimpanel
++Comment[et]=Kimpaneli andmemootor
+ Comment[fi]=Tietomoottori Kimpaneliin
+ Comment[fr]=Moteur de données pour Kimpanel
+ Comment[gl]=Un motor de datos para Kimpanel.
+diff --git a/desktoppackage/contents/layout.js b/desktoppackage/contents/layout.js
+index 6854774..e62f467 100644
+--- a/desktoppackage/contents/layout.js
++++ b/desktoppackage/contents/layout.js
+@@ -1,12 +1,9 @@
+ 
+ loadTemplate("org.kde.plasma.desktop.defaultPanel")
+ 
+-for (var i = 0; i < screenCount; ++i) {
+-    var id = createActivity("Desktop");
+-    var desktopsArray = desktopsForActivity(id);
+-    print(desktopsArray.length);
+-    for( var j = 0; j < desktopsArray.length; j++) {
+-        desktopsArray[j].wallpaperPlugin = 'org.kde.image';
+-        //var clock = desktopsArray[j].addWidget("org.kde.plasma.analogclock");
+-    }
++var desktopsArray = desktopsForActivity(currentActivity());
++for( var j = 0; j < desktopsArray.length; j++) {
++    desktopsArray[j].wallpaperPlugin = 'org.kde.image';
++    //var clock = desktopsArray[j].addWidget("org.kde.plasma.analogclock");
+ }
++
+diff --git a/kcms/activities/kcm_activities.desktop b/kcms/activities/kcm_activities.desktop
+index 232201e..dbeaa4a 100644
+--- a/kcms/activities/kcm_activities.desktop
++++ b/kcms/activities/kcm_activities.desktop
+@@ -77,6 +77,7 @@ Comment[de]=Aktivitäten helfen Ihnen dabei, sich auf eine Aufgabe zu konzentrie
+ Comment[el]=Οι δραστηριότητες σας βοηθούν να εστιάζετε σε μια συγκεκριμένη εργασία
+ Comment[en_GB]=Activities help you to focus on a specific task
+ Comment[es]=Las actividades le ayudan a centrarse en una determinada tarea
++Comment[et]=Tegevused aitavad keskenduda konkreetsele ülesandele
+ Comment[fi]=Aktiviteetit auttavat sinua keskittymään yhteen asiaan
+ Comment[gl]=As actividades axudan a centrarse en tarefas concretas.
+ Comment[he]=פעלויות עוזרות לך להתמקד בחלון אחד
+diff --git a/kcms/autostart/autostart.desktop b/kcms/autostart/autostart.desktop
+index c08ba20..fdd7233 100644
+--- a/kcms/autostart/autostart.desktop
++++ b/kcms/autostart/autostart.desktop
+@@ -150,8 +150,8 @@ Comment[zh_TW]=自動啟動應用程式
+ X-KDE-Keywords=Autostart Manager,autostart,startup,system startup,kde start,cron
+ X-KDE-Keywords[ast]=Xestor d'aniciu automáticu,aniciu automáticu,aniciu del sistema,aniciu de kde,cron
+ X-KDE-Keywords[bs]=Automatsko pokretanje upravitelja,automatsko pokretanje,pokretanje,sustav za pokretanje,početak kde,kompjuter izvodi zadatak za određeno vrijeme.
+-X-KDE-Keywords[ca]=Gestor d'inici automàtic,inici automàtic,inici,inici del sistema,inici del kde,cron
+-X-KDE-Keywords[ca@valencia]=Gestor d'inici automàtic,inici automàtic,inici,inici del sistema,inici del kde,cron
++X-KDE-Keywords[ca]=Gestor de l'inici automàtic,inici automàtic,inici,inici del sistema,inici del kde,cron
++X-KDE-Keywords[ca@valencia]=Gestor de l'inici automàtic,inici automàtic,inici,inici del sistema,inici del kde,cron
+ X-KDE-Keywords[da]=autostart,opstart,systemstart,kde start,cron
+ X-KDE-Keywords[de]=Autostartverwaltung,Autostart,Startvorgang,Systemstart,KDE-Start,Cron
+ X-KDE-Keywords[el]=διαχειριστής αυτόματης εκκίνησης,αυτόματη εκκίνηση,έναρξη,έναρξη συστήματος,έναρξη kde,cron
+diff --git a/kcms/componentchooser/componentchooser.desktop b/kcms/componentchooser/componentchooser.desktop
+index 6442bbb..5fb1d07 100644
+--- a/kcms/componentchooser/componentchooser.desktop
++++ b/kcms/componentchooser/componentchooser.desktop
+@@ -100,8 +100,8 @@ Comment=Default Applications
+ Comment[ar]=التّطبيقات الافتراضيّة
+ Comment[ast]=Aplicaciones por defeutu
+ Comment[bs]=Podrazumijevani programi
+-Comment[ca]=Aplicacions per defecte
+-Comment[ca@valencia]=Aplicacions per defecte
++Comment[ca]=Aplicacions per omissió
++Comment[ca@valencia]=Aplicacions per omissió
+ Comment[cs]=Výchozí aplikace
+ Comment[da]=Standardprogrammer
+ Comment[de]=Standard-Anwendungen
+@@ -149,8 +149,8 @@ X-KDE-Keywords[ar]=التطبيقات الافتراضية,مكوّنات,مكو
+ X-KDE-Keywords[bg]=default applications,components,component chooser,resources,e-mail,email client,text editor,instant messenger,terminal emulator,web browser,URL,hyperlinks,програми по подразбиране,подразбиране,е-поща,съобщения,моментни съобщения,терминал, конзола,браузър,уеб-браузър
+ X-KDE-Keywords[bn]=default applications,components,component chooser,resources,e-mail,email client,text editor,instant messenger,terminal emulator,web browser,URL,hyperlinks
+ X-KDE-Keywords[bs]=default applications,components,component chooser,resources,e-mail,email client,text editor,instant messenger,terminal emulator,web browser,URL,hyperlinks, podrazumijevani programi, komponente, izbor komponenti, resursi, elektronska pošta, instant poruke
+-X-KDE-Keywords[ca]=aplicacions per defecte,components,selector de components,recursos,e-mail,client de correu electrònic,editor de text,missatgeria instantània,emulador de terminal,navegador web,URL,hiperenllaços
+-X-KDE-Keywords[ca@valencia]=aplicacions per defecte,components,selector de components,recursos,e-mail,client de correu electrònic,editor de text,missatgeria instantània,emulador de terminal,navegador web,URL,hiperenllaços
++X-KDE-Keywords[ca]=aplicacions per omissió,components,selector de components,recursos,e-mail,client de correu electrònic,editor de text,missatgeria instantània,emulador de terminal,navegador web,URL,hiperenllaços
++X-KDE-Keywords[ca@valencia]=aplicacions per omissió,components,selector de components,recursos,e-mail,client de correu electrònic,editor de text,missatgeria instantània,emulador de terminal,navegador web,URL,hiperenllaços
+ X-KDE-Keywords[cs]=výchozí aplikace,komponenty,výběr komponent,zdroje,e-mail,emailový klient,editor textu,komunikátor,emulátor terminálů,webový prohlížeč,URL,odkazy
+ X-KDE-Keywords[da]=standardprogrammer,komponenter,komponentvælger,ressourcer,e-mail,email klient,tekst-editor,instant messenger,terminal-emulator,webbrowser,URL,hyperlinks
+ X-KDE-Keywords[de]=Standard-Anwendungen,Standard-Komponenten,Komponenten,Ressourcen,E-Mail,E-Mail-Programm,Terminal-Emulation,Programme,Anwendungen,Web,Browser,URL
+diff --git a/kcms/dateandtime/clock.desktop b/kcms/dateandtime/clock.desktop
+index 69c09d6..ab295b3 100644
+--- a/kcms/dateandtime/clock.desktop
++++ b/kcms/dateandtime/clock.desktop
+@@ -117,6 +117,7 @@ Comment[da]=Dato og tid
+ Comment[de]=Datum und Zeit
+ Comment[el]=Ημερομηνία και ώρα
+ Comment[en_GB]=Date and Time
++Comment[eo]=Dato kaj Tempo
+ Comment[es]=Fecha y hora
+ Comment[et]=Kuupäev ja kellaaeg
+ Comment[fi]=Aika ja päiväys
+diff --git a/kcms/desktoptheme/kcm.cpp b/kcms/desktoptheme/kcm.cpp
+index 3210398..989e337 100644
+--- a/kcms/desktoptheme/kcm.cpp
++++ b/kcms/desktoptheme/kcm.cpp
+@@ -95,9 +95,10 @@ void KCMDesktopTheme::getNewThemes()
+     KNS3::DownloadDialog *dialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
+     dialog->open();
+ 
+-    connect(dialog, &QDialog::done, this, [this, dialog]() {
++    connect(dialog, &QDialog::accepted, this, [this, dialog]() {
+         if (!dialog->changedEntries().isEmpty()) {
+             load();
++            delete dialog;
+         }
+     });
+ }
+diff --git a/kcms/keys/keys.desktop b/kcms/keys/keys.desktop
+index ac6afb6..5836eda 100644
+--- a/kcms/keys/keys.desktop
++++ b/kcms/keys/keys.desktop
+@@ -142,8 +142,8 @@ Comment[zh_TW]=全域鍵盤捷徑
+ 
+ X-KDE-Keywords=Keys,Global key bindings,Key scheme,Key bindings,shortcuts,application shortcuts,global shortcuts
+ X-KDE-Keywords[bs]=Tipke, Globalni vezovi tipki, Šema tipki, Veze tipki, Prečice, Prečice za aplikacije, globalne Prečice
+-X-KDE-Keywords[ca]=Tecles,Assignació de tecles globals,Esquema de tecles,Assignació de tecles,dreceres,dreceres d'aplicació,dreceres globals
+-X-KDE-Keywords[ca@valencia]=Tecles,Assignació de tecles globals,Esquema de tecles,Assignació de tecles,dreceres,dreceres d'aplicació,dreceres globals
++X-KDE-Keywords[ca]=Tecles,Vinculació de tecles globals,Esquema de tecles,Vinculació de tecles,dreceres,dreceres d'aplicació,dreceres globals
++X-KDE-Keywords[ca@valencia]=Tecles,Vinculació de tecles globals,Esquema de tecles,Vinculació de tecles,dreceres,dreceres d'aplicació,dreceres globals
+ X-KDE-Keywords[da]=Taster,globale tastebindinger,tasteskema,tastebindinger,genveje,programgenveje,globale genveje
+ X-KDE-Keywords[de]=Tasten,Tastenzuordnung,Tastenkürzel,Kurzbefehle,Tastenschema,Tastaturlayout
+ X-KDE-Keywords[el]=Πλήκτρα,δεσμεύσεις καθολικών πλήκτρων, σχήμα πλήκτρων, δεσμεύσεις πλήκτρων,συντομεύσεις,συντομεύσεις εφαρμογών,καθολικές συντομεύσεις
+diff --git a/kcms/lookandfeel/kcm_lookandfeel.desktop b/kcms/lookandfeel/kcm_lookandfeel.desktop
+index 294c6b3..b2c41ec 100644
+--- a/kcms/lookandfeel/kcm_lookandfeel.desktop
++++ b/kcms/lookandfeel/kcm_lookandfeel.desktop
+@@ -27,7 +27,7 @@ Name[et]=Välimus
+ Name[fi]=Ulkoasu ja tuntuma
+ Name[fr]=Apparence
+ Name[gl]=Aparencia e comportamento
+-Name[he]=מראה והרגשה
++Name[he]=מראה ותחושה
+ Name[hu]=Megjelenés
+ Name[id]=Lihat Dan Rasakan
+ Name[is]=Útlit og viðmót
+@@ -72,7 +72,7 @@ Comment[et]=Välimus
+ Comment[fi]=Ulkoasu ja tuntuma
+ Comment[fr]=Apparence
+ Comment[gl]=Aparencia e comportamento
+-Comment[he]=מראה והרגשה
++Comment[he]=מראה ותחושה
+ Comment[hu]=Megjelenés
+ Comment[id]=Lihat Dan Rasakan
+ Comment[is]=Útlit og viðmót
+diff --git a/kcms/lookandfeel/package/metadata.desktop b/kcms/lookandfeel/package/metadata.desktop
+index 4a832a1..37ebf3b 100644
+--- a/kcms/lookandfeel/package/metadata.desktop
++++ b/kcms/lookandfeel/package/metadata.desktop
+@@ -15,7 +15,7 @@ Name[et]=Välimus
+ Name[fi]=Ulkoasu ja tuntuma
+ Name[fr]=Apparence
+ Name[gl]=Aparencia e comportamento
+-Name[he]=מראה והרגשה
++Name[he]=מראה ותחושה
+ Name[hu]=Megjelenés
+ Name[id]=Lihat Dan Rasakan
+ Name[is]=Útlit og viðmót
+@@ -60,7 +60,7 @@ Comment[et]=Töölaua välimuse seadistamine
+ Comment[fi]=Työpöydän ulkoasun ja tuntuman asetukset
+ Comment[fr]=Configurer l'apparence du bureau
+ Comment[gl]=Configurar a aparencia e o comportamento do escritorio
+-Comment[he]=הגדר את המראה וההרגשה של שולחן העבודה
++Comment[he]=הגדר את המראה של שולחן העבודה
+ Comment[hu]=Az asztal megjelenésének beállítása
+ Comment[id]=Atur Lihat Dan Rasakan Desktop
+ Comment[is]=Stilla útlit og viðmót skjáborðsins
+diff --git a/kcms/phonon/kcm_phonon.desktop b/kcms/phonon/kcm_phonon.desktop
+index ed804a3..4056790 100644
+--- a/kcms/phonon/kcm_phonon.desktop
++++ b/kcms/phonon/kcm_phonon.desktop
+@@ -59,8 +59,8 @@ Name[zh_TW]=音效和視訊
+ Comment=Phonon Audio and Video
+ Comment[ar]=صوت وفيديو فنون
+ Comment[bs]=Audio i Video fonona
+-Comment[ca]=Audio i vídeo del Phonon
+-Comment[ca@valencia]=Audio i vídeo del Phonon
++Comment[ca]=Àudio i vídeo del Phonon
++Comment[ca@valencia]=Àudio i vídeo del Phonon
+ Comment[cs]=Audio a video - Phonon
+ Comment[da]=Phonon lyd og video
+ Comment[de]=Phonon - Audio und Video
+diff --git a/kcms/style/style.desktop b/kcms/style/style.desktop
+index 5f2ec78..66ddd2a 100644
+--- a/kcms/style/style.desktop
++++ b/kcms/style/style.desktop
+@@ -17,8 +17,8 @@ Name=Widget Style
+ Name[ar]=نمط الودجات
+ Name[ast]=Estilu de widgets
+ Name[bs]=Stil grafičke kontrole
+-Name[ca]=Estil de l'estri
+-Name[ca@valencia]=Estil de l'estri
++Name[ca]=Estil dels estris
++Name[ca@valencia]=Estil dels estris
+ Name[cs]=Styl widgetu
+ Name[da]=Kontrolstil
+ Name[de]=Stil der Bedienelemente
+diff --git a/knetattach/org.kde.knetattach.desktop b/knetattach/org.kde.knetattach.desktop
+index b5c743b..ab76f21 100755
+--- a/knetattach/org.kde.knetattach.desktop
++++ b/knetattach/org.kde.knetattach.desktop
+@@ -98,8 +98,8 @@ GenericName[bn]=নেটওয়ার্ক ফোল্ডার উইজা
+ GenericName[bn_IN]=নেটওয়ার্ক ফোল্ডারের উইজার্ড
+ GenericName[br]=Skoazeller renkell rouedad
+ GenericName[bs]=Čarobnjak za mrežne fascikle
+-GenericName[ca]=Assistent de carpeta de xarxa
+-GenericName[ca@valencia]=Assistent de carpeta de xarxa
++GenericName[ca]=Assistent per a carpetes de xarxa
++GenericName[ca@valencia]=Assistent per a carpetes de xarxa
+ GenericName[cs]=Průvodce síťovou složkou
+ GenericName[csb]=Asystenta sécowëch katalogów
+ GenericName[da]=Guide til netværksmappe
+diff --git a/org.kde.plasmashell.metainfo.xml b/org.kde.plasmashell.metainfo.xml
+index 7e4a34b..f35ce29 100644
+--- a/org.kde.plasmashell.metainfo.xml
++++ b/org.kde.plasmashell.metainfo.xml
+@@ -10,10 +10,15 @@
+   <name xml:lang="es">Escritorio KDE Plasma</name>
+   <name xml:lang="gl">Escritorio Plasma de KDE</name>
+   <name xml:lang="nl">KDE Plasma Bureaublad</name>
++  <name xml:lang="nn">KDE Plasma-skrivebord</name>
+   <name xml:lang="pl">Pulpit Plazmy KDE</name>
+   <name xml:lang="pt">Área de Trabalho Plasma do KDE</name>
+   <name xml:lang="sk">Plocha KDE Plasma</name>
+   <name xml:lang="sl">KDE-jevo namizje Plasma</name>
++  <name xml:lang="sr">КДЕ‑ова плазма површ</name>
++  <name xml:lang="sr-Latn">KDE‑ova plasma površ</name>
++  <name xml:lang="sr-ijekavian">КДЕ‑ова плазма површ</name>
++  <name xml:lang="sr-ijekavianlatin">KDE‑ova plasma površ</name>
+   <name xml:lang="sv">KDE Plasma skrivbord</name>
+   <name xml:lang="uk">Стільниця Плазми KDE</name>
+   <name xml:lang="x-test">xxKDE Plasma Desktopxx</name>
+@@ -24,10 +29,15 @@
+   <summary xml:lang="es">Experiencia completa de escritorio de KDE. Sencillo por omisión, potente cuando es necesario.</summary>
+   <summary xml:lang="gl">Experiencia de escritorio completa de KDE. Simple de primeiras, potente cando cómpre.</summary>
+   <summary xml:lang="nl">De complete bureaubladvaring van KDE. Standaard eenvoudig, krachtig indien nodig.</summary>
++  <summary xml:lang="nn">Komplett KDE-oppleving. Enkel som standard og kraftig når nødvendig.</summary>
+   <summary xml:lang="pl">Całkowite wrażenie pulpitu KDE. Prosty z natury, zaawansowany gdy potrzeba.</summary>
+   <summary xml:lang="pt">A experiência completa de trabalho do KDE. Simples por omissão, poderosa quando necessário.</summary>
+   <summary xml:lang="sk">Kompletná pracovná plocha KDE. Predvolene jednoduchá, pri potrebe silná.</summary>
+   <summary xml:lang="sl">KDE-jeva popolna namizna izkušnja. Privzeto preprosta, a tudi zmogljiva, če je to zahtevano.</summary>
++  <summary xml:lang="sr">КДЕ‑ово потпуно искуство површи. Подразумевано једноставно, моћно кад затреба.</summary>
++  <summary xml:lang="sr-Latn">KDE‑ovo potpuno iskustvo površi. Podrazumevano jednostavno, moćno kad zatreba.</summary>
++  <summary xml:lang="sr-ijekavian">КДЕ‑ово потпуно искуство површи. Подразумевано једноставно, моћно кад затреба.</summary>
++  <summary xml:lang="sr-ijekavianlatin">KDE‑ovo potpuno iskustvo površi. Podrazumevano jednostavno, moćno kad zatreba.</summary>
+   <summary xml:lang="sv">KDE:s fullständiga skrivbordsupplevelse. Normalt enkel, kraftfull vid behov.</summary>
+   <summary xml:lang="uk">Повноцінне стільничне середовище KDE. Типово просте, але потужне, якщо це потрібно.</summary>
+   <summary xml:lang="x-test">xxKDE's complete desktop experience. Simple by default, powerful when needed.xx</summary>
+@@ -46,10 +56,15 @@
+       <caption xml:lang="es">Escritorio Plasma en modo de vista de carpeta con reloj y notas</caption>
+       <caption xml:lang="gl">Escritorio Plasma na vista de cartafoles con trebellos de reloxo e notas.</caption>
+       <caption xml:lang="nl">Plasma-bureaublad in mapweergave met klok en notitie-widgets</caption>
++      <caption xml:lang="nn">Plasma-skrivebord i mappevising med klokke- og notatelement</caption>
+       <caption xml:lang="pl">Pulpit Plazmy w widoku katalogu z zegarem i notatkami.</caption>
+       <caption xml:lang="pt">Ecrã do Plasma na Área de Pastas com o Relógio e as Notas</caption>
+       <caption xml:lang="sk">Plocha Plasma v zobrazení priečinka s hodinami a widgetmi poznámok</caption>
+       <caption xml:lang="sl">Namizje Plasma s prikazom mape in z gradnikoma za uro ter sporočilca.</caption>
++      <caption xml:lang="sr">Плазма површ у приказу фасцикле са виџетима сата и бележака</caption>
++      <caption xml:lang="sr-Latn">Plasma površ u prikazu fascikle sa vidžetima sata i beležaka</caption>
++      <caption xml:lang="sr-ijekavian">Плазма површ у приказу фасцикле са виџетима сата и бележака</caption>
++      <caption xml:lang="sr-ijekavianlatin">Plasma površ u prikazu fascikle sa vidžetima sata i beležaka</caption>
+       <caption xml:lang="sv">Plasma skrivbord i katalogvy med de grafiska komponenterna Klocka och Anteckningar</caption>
+       <caption xml:lang="uk">Стільниця Плазми на панелі перегляду тек із віджетами годинника і нотаток</caption>
+       <caption xml:lang="x-test">xxPlasma Desktop in Folder View with Clock and Notes Widgetsxx</caption>
+diff --git a/runners/kwin/plasma-runner-kwin.desktop b/runners/kwin/plasma-runner-kwin.desktop
+index 0e54924..359224d 100644
+--- a/runners/kwin/plasma-runner-kwin.desktop
++++ b/runners/kwin/plasma-runner-kwin.desktop
+@@ -8,6 +8,7 @@ Name[de]=KWin
+ Name[el]=KWin
+ Name[en_GB]=KWin
+ Name[es]=KWin
++Name[et]=KWin
+ Name[fi]=KWin
+ Name[gl]=KWin
+ Name[he]=מנהל חלונות KWin
+@@ -38,6 +39,7 @@ Comment[de]=Interaktion mit dem Plasma-Compositor
+ Comment[el]=Αλληλεπίδραση με τον συνθέτη Plasma
+ Comment[en_GB]=Interact with the Plasma Compositor
+ Comment[es]=Interactuar con el compositor de Plasma
++Comment[et]=Suhtlus Plasma komposiitoriga
+ Comment[fi]=Ole vuorovaikutuksessa Plasma-koostimen kanssa
+ Comment[gl]=Interactúa co compositor de Plasma
+ Comment[it]=Interagisci con il compositore di Plasma

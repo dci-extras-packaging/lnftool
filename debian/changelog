@@ -1,6 +1,6 @@
-plasma-desktop (4:5.7.2-1~2.gbpf3cd3f) UNRELEASED; urgency=medium
+plasma-desktop (4:5.7.3-1~1.gbp2ae851) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @f3cd3f7308f0239e79b9d1a262182c01e41737e8 **
+  ** SNAPSHOT build @2ae8512a29cdfbd0326ff3bd3f8ee68d729a029c **
 
   [ Automatic packaging ]
   ** SNAPSHOT build @d48605cb173dff0f1be8618e63270d12b8930b05 **
@@ -12,8 +12,9 @@ plasma-desktop (4:5.7.2-1~2.gbpf3cd3f) UNRELEASED; urgency=medium
   [ Maximiliano Curia ]
   * Recommend kwin-x11 and fallback to any package providing kwin.
   * Add missing build dependency
+  * UNRELEASED
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Fri, 05 Aug 2016 10:29:27 +0200
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 05 Aug 2016 12:55:23 +0200
 
 plasma-desktop (4:5.6.5-1) unstable; urgency=medium
 

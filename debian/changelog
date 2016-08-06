@@ -1,6 +1,6 @@
-plasma-desktop (4:5.7.3-1~1.gbp2ae851) UNRELEASED; urgency=medium
+plasma-desktop (4:5.7.3-1~2.gbp766269) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @2ae8512a29cdfbd0326ff3bd3f8ee68d729a029c **
+  ** SNAPSHOT build @7662695d8786c4b68aa9154be8b0e80a1d12ce95 **
 
   [ Automatic packaging ]
   ** SNAPSHOT build @d48605cb173dff0f1be8618e63270d12b8930b05 **
@@ -13,8 +13,10 @@ plasma-desktop (4:5.7.3-1~1.gbp2ae851) UNRELEASED; urgency=medium
   * Recommend kwin-x11 and fallback to any package providing kwin.
   * Add missing build dependency
   * UNRELEASED
+  * Drop activities-stats experimental library
+  * Update install files
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 05 Aug 2016 12:55:23 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 06 Aug 2016 10:57:15 +0200
 
 plasma-desktop (4:5.6.5-1) unstable; urgency=medium
 

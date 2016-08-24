@@ -209,6 +209,7 @@ Architecture: all
 Depends: ${misc:Depends}
 Recommends: plasma-framework (>> 5.22),
             plasma-workspace,
+            qml-module-org-kde-activities,
             qml-module-org-kde-extensionplugin,
             qml-module-org-kde-kwindowsystem,
             qml-module-qtquick-dialogs

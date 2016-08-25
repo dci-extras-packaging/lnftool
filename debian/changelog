@@ -1,6 +1,6 @@
-plasma-desktop (4:5.7.3-1~4.gbp255514) UNRELEASED; urgency=medium
+plasma-desktop (4:5.7.4-1~1.gbp4bd59f) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @255514b2c43f707e278e2b56e41c40e3e257d477 **
+  ** SNAPSHOT build @4bd59f8a5cfd8ab96f13d5053aa9c6cc9d604c76 **
 
   [ Automatic packaging ]
   ** SNAPSHOT build @d48605cb173dff0f1be8618e63270d12b8930b05 **
@@ -28,7 +28,11 @@ plasma-desktop (4:5.7.3-1~4.gbp255514) UNRELEASED; urgency=medium
   [ Matthias Klumpp ]
   * Do not recommend transitional packages for plasma-discover
 
- -- Matthias Klumpp <matthias@tenstral.net>  Fri, 19 Aug 2016 01:57:20 +0200
+  [ Pino Toscano ]
+  * start a new changelog entry for 4:5.6.5-2
+  * add missing changelog item
+
+ -- Pino Toscano <pino@debian.org>  Thu, 25 Aug 2016 12:57:51 +0200
 
 plasma-desktop (4:5.6.5-1) unstable; urgency=medium
 

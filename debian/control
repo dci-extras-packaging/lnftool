@@ -244,14 +244,6 @@ Description: Tools and widgets for the desktop data files
  .
  This package contains the data files
 
-Package: kde-touchpad
-Architecture: any
-Depends: plasma-desktop, ${misc:Depends}
-Section: oldlibs
-Priority: extra
-Description: transitional dummy package
- This is a transitional dummy package. It can safely be removed.
-
 Package: kde-config-touchpad
 Depends: plasma-desktop, ${misc:Depends}
 Architecture: all

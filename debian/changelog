@@ -1,6 +1,6 @@
-plasma-desktop (4:5.7.4-2~1.gbp2f02ac) UNRELEASED; urgency=medium
+plasma-desktop (4:5.7.4-2~2.gbpb5f9fa) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @2f02ac26d778d06ec488478372b5b59b2067a2e8 **
+  ** SNAPSHOT build @b5f9fab95dfc3571b4e5dbbc6c0678023a738e86 **
 
   [ Pino Toscano ]
   * Remove the transitional kde-touchpad, since it was never part of a stable
@@ -8,8 +8,12 @@ plasma-desktop (4:5.7.4-2~1.gbp2f02ac) UNRELEASED; urgency=medium
   * Change the section of libkfontinst5, and libkfontinstui5 to libs.
   * Update the patches:
     - add_missing_include: drop, fixed upstream
+  * start a new changelog entry for 4:5.7.4-2
+  * remove transitional kde-touchpad
+  * change section of libkfontinst5 and libkfontinstui5 to libs
+  * update the patches
 
- -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 02 Sep 2016 08:07:44 +0200
+ -- Pino Toscano <pino@debian.org>  Fri, 02 Sep 2016 09:04:56 +0200
 
 plasma-desktop (4:5.7.4-1) unstable; urgency=medium
 

@@ -177,6 +177,7 @@ Description: Tools and widgets for the desktop
 
 Package: libkfontinst5
 Architecture: any
+Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop
@@ -191,6 +192,7 @@ Description: Tools and widgets for the desktop library
 
 Package: libkfontinstui5
 Architecture: any
+Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop

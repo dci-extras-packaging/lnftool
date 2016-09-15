@@ -13,6 +13,8 @@ plasma-desktop (4:5.7.4-2~) UNRELEASED; urgency=medium
   * Build with -gstabs instead of -g also on armel and armhf, to work around
     virtual memory exhaustion.
   * Update lintian overrides.
+  * Remove breaks/replaces on old versions of plasma-desktop-data, and
+    plasma-desktop-dev, since those were never part of a stable release.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 02 Sep 2016 08:07:44 +0200
 

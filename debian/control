@@ -151,16 +151,12 @@ Breaks: baloo-kf5 (<< 5.5),
         kde-config-touchpad (<< 4:5),
         kde-workspace-bin,
         kde-workspace-data,
-        plasma-desktop-data (<< 4:5.3.2-0ubuntu1~),
-        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
         plasma-widget-kimpanel
 Replaces: baloo-kf5 (<< 5.5),
           kactivities,
           kde-config-touchpad (<< 4:5),
           kde-workspace-bin,
           kde-workspace-data,
-          plasma-desktop-data (<< 4:5.3.2-0ubuntu1~),
-          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
           plasma-widget-kimpanel
 Description: Tools and widgets for the desktop
  Plasma Desktop offers a beautiful looking desktop
@@ -217,7 +213,6 @@ Breaks: baloo-kf5 (<< 5.5),
         kde-workspace-bin,
         kde-workspace-data,
         kdeplasma-addons-data (<< 4:5.6~),
-        plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
         plasma-widget-kimpanel,
         ${kde-l10n:all}
 Replaces: baloo-kf5 (<< 5.5),
@@ -226,7 +221,6 @@ Replaces: baloo-kf5 (<< 5.5),
           kde-workspace-bin,
           kde-workspace-data,
           kdeplasma-addons-data (<< 4:5.6~),
-          plasma-desktop-dev (<< 4:5.0.2-0ubuntu1~ubuntu14.10~ppa8),
           plasma-widget-kimpanel,
           ${kde-l10n:all}
 Description: Tools and widgets for the desktop data files

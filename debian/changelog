@@ -1,6 +1,4 @@
-plasma-desktop (4:5.7.4-2~1.gbp2f02ac) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @2f02ac26d778d06ec488478372b5b59b2067a2e8 **
+plasma-desktop (4:5.7.4-2~) UNRELEASED; urgency=medium
 
   [ Pino Toscano ]
   * Remove the transitional kde-touchpad, since it was never part of a stable

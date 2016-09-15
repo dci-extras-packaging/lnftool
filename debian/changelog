@@ -8,6 +8,9 @@ plasma-desktop (4:5.7.4-2~1.gbp2f02ac) UNRELEASED; urgency=medium
   * Change the section of libkfontinst5, and libkfontinstui5 to libs.
   * Update the patches:
     - add_missing_include: drop, fixed upstream
+  * Switch to non-deprecated build dependencies:
+    - kdoctools-dev -> libkf5doctools-dev
+    - kio-dev -> libkf5kio-dev
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 02 Sep 2016 08:07:44 +0200
 

@@ -9,6 +9,8 @@ plasma-desktop (4:5.7.4-2~) UNRELEASED; urgency=medium
   * Switch to non-deprecated build dependencies:
     - kdoctools-dev -> libkf5doctools-dev
     - kio-dev -> libkf5kio-dev
+  * Build with -gstabs instead of -g also on armel and armhf, to work around
+    virtual memory exhaustion.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 02 Sep 2016 08:07:44 +0200
 

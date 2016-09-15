@@ -4,7 +4,7 @@
 l10npkgs_firstversion_ok := 4:4.14.0-4~
 
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
-ifneq (,$(filter $(DEB_HOST_ARCH), mips mipsel))
+ifneq (,$(filter $(DEB_HOST_ARCH), armel armhf mips mipsel))
     export DEB_CFLAGS_MAINT_STRIP = -g
     export DEB_CXXFLAGS_MAINT_STRIP = -g
     export DEB_CFLAGS_MAINT_APPEND = -gstabs

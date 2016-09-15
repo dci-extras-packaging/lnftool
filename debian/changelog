@@ -3,6 +3,7 @@ plasma-desktop (4:5.7.4-2~) UNRELEASED; urgency=medium
   [ Pino Toscano ]
   * Remove the transitional kde-touchpad, since it was never part of a stable
     release.
+    - remove the obsolete breaks/replaces for it
   * Change the section of libkfontinst5, and libkfontinstui5 to libs.
   * Update the patches:
     - add_missing_include: drop, fixed upstream

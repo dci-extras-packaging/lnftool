@@ -1,6 +1,6 @@
-plasma-desktop (4:5.8.0-1~1.gbped44f4) UNRELEASED; urgency=medium
+plasma-desktop (4:5.8.0-1~2.gbpdc7a16) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @ed44f49350a0cea454451e93d47214d4c2a4a360 **
+  ** SNAPSHOT build @dc7a16bf397ff0a57539a0a2b767efd8daedcafd **
 
   [ Pino Toscano ]
   ** SNAPSHOT build @44c74058a1914c5244b41c4af5bfc006490a1313 **
@@ -18,8 +18,13 @@ plasma-desktop (4:5.8.0-1~1.gbped44f4) UNRELEASED; urgency=medium
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
   * Update build-deps and deps with the info from cmake
+  * Update build-deps and deps with the info from cmake
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 04 Oct 2016 13:47:24 +0200
+  [ Maximiliano Curia ]
+  * Update build-deps and deps with the info from cmake
+  * Update install files
+
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Wed, 05 Oct 2016 14:22:30 +0200
 
 plasma-desktop (4:5.7.4-2) unstable; urgency=medium
 

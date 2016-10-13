@@ -1,3 +1,11 @@
+plasma-desktop (4:5.8.1-1~1.gbpbcfaed) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @bcfaed91cbcee2ed42d0d7d178fa8974d5e48e0f **
+
+  * UNRELEASED
+
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 13 Oct 2016 22:59:18 +0200
+
 plasma-desktop (4:5.8.0-1) unstable; urgency=medium
 
   [ Automatic packaging ]

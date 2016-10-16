@@ -1,11 +1,8 @@
-plasma-desktop (4:5.8.1-1~2.gbp6d84b1) UNRELEASED; urgency=medium
+plasma-desktop (4:5.8.1-1) unstable; urgency=medium
 
-  ** SNAPSHOT build @6d84b1c574ab7c5803df1c433d1619366d8c8169 **
+  * New upstream release (5.8.1)
 
-  * UNRELEASED
-  * UNRELEASED
-
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Sat, 15 Oct 2016 11:57:34 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 16 Oct 2016 23:01:52 +0200
 
 plasma-desktop (4:5.8.0-1) unstable; urgency=medium
 

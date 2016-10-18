@@ -1,3 +1,11 @@
+plasma-desktop (4:5.8.2-1~1.gbp2842bd) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @2842bdf984a5ee91c88988533d0f9148e3c2e079 **
+
+  * UNRELEASED
+
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Tue, 18 Oct 2016 16:58:02 +0200
+
 plasma-desktop (4:5.8.1-1) unstable; urgency=medium
 
   * New upstream release (5.8.1)

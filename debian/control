@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: baloo-kf5-dev (>= 5.13~),
+               breeze-dev,
                cmake (>= 2.8.12),
                debhelper (>= 9),
                extra-cmake-modules (>= 1.8.0~),
@@ -13,6 +14,7 @@ Build-Depends: baloo-kf5-dev (>= 5.13~),
                kio-dev,
                kscreenlocker-dev (>= 5.5.1~),
                kwin-dev (>= 4:5.5.1~),
+               libappstreamqt-dev,
                libboost-dev,
                libcanberra-dev,
                libfontconfig1-dev,

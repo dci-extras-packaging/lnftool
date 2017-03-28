@@ -1,0 +1,26 @@
+From a03d08a99e86c13ee50407f5189d70bf0a2b37fc Mon Sep 17 00:00:00 2001
+From: Eike Hein <hein@kde.org>
+Date: Mon, 27 Mar 2017 21:04:19 +0900
+Subject: Set wrapMode to NoWrap when maximumLineCount is 1.
+
+Otherwise QML Text elides much too early for some reason.
+---
+ containments/desktop/package/contents/ui/FolderItemDelegate.qml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/containments/desktop/package/contents/ui/FolderItemDelegate.qml b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+index c56a9ae..4b8ad7c 100644
+--- a/containments/desktop/package/contents/ui/FolderItemDelegate.qml
++++ b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+@@ -300,7 +300,7 @@ Item {
+ 
+                         textFormat: Text.PlainText
+ 
+-                        wrapMode: Text.Wrap
++                        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
+                         elide: Text.ElideRight
+ 
+                         color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
+-- 
+cgit v0.11.2
+

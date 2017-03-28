@@ -1,0 +1,26 @@
+From f5f685ecdc630fdcd767e2a6f611b8f43e7f8c3e Mon Sep 17 00:00:00 2001
+From: Eike Hein <hein@kde.org>
+Date: Mon, 27 Mar 2017 21:02:35 +0900
+Subject: Set wrapMode to NoWrap when maximumLineCount is 1.
+
+Otherwise QML Text elides much too early for some reason.
+---
+ applets/taskmanager/package/contents/ui/Task.qml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/applets/taskmanager/package/contents/ui/Task.qml b/applets/taskmanager/package/contents/ui/Task.qml
+index 1408347..3521f96 100644
+--- a/applets/taskmanager/package/contents/ui/Task.qml
++++ b/applets/taskmanager/package/contents/ui/Task.qml
+@@ -472,7 +472,7 @@ MouseArea {
+         }
+ 
+         text: model.display
+-        wrapMode: Text.Wrap
++        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
+         elide: Text.ElideRight
+         textFormat: Text.PlainText
+         verticalAlignment: Text.AlignVCenter
+-- 
+cgit v0.11.2
+

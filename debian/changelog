@@ -1,3 +1,63 @@
+plasma-desktop (4:5.8.7.1-1~) UNRELEASED; urgency=medium
+
+  * New upstream release (5.8.7.1)
+      + Revert "use KPluginMetaData::readStringList"
+        This reverts commit 7993cd433ca68a0136a990d3f1710a6360024fe9
+      + Set root.dragging to false during reset.
+        Fixes KDE#376633
+      + Fix default fixed font in fonts kcm
+        Now it is the same as used by plasma-integration.
+        Also adjust the file name in the comment, which was apparently forgotten.
+        Fixes #863243
+      + Fix switching categories via the filter listview on touchscreens.
+      + Disable editing of 'Global Shortcuts' component names
+        Fixes KDE#376935
+      + [Folder View] Fix action button hover and pressed state
+        The hover state didn't work because it referenced "pressed" which it didn't find in the scope.
+        The pressed graphic suffix was wrong.
+      + [AppletAppearance] Silence warning
+        "applet" is set after the item is created and would result in a warning on startup.
+      + Do apply margin if in right-to-left mode.
+        Fixes KDE#376529
+      + [Folder View] Explicitly set prefix as empty in normal state
+        Somehow with FrameSvg optimizations State no longer manages to reset the property back to its original state when state is reset.
+        Fixes KDE#377441
+      + [Kicker] Fix highlighting favorites
+        ToolTipArea steals mouse events from the MouseEventListener.
+        Related to KDE#377652
+      + Add missing member initialization.
+        Fixes KDE#378016
+      + [Applet Alternatives] Fix icon size
+        Another regression with new IconItem implicit size handling.
+        Unintuitively implicit size has precedence over regular size when placed in a Layout,
+        since the latter is managed by it.
+      + [Applet Alternatives] Don't animate highlight resize
+        The delegates hardly differ in size leading to ugly jumps when moving the selection
+      + [Folder View] Use toDisplayString which strips passwords
+        Otherwise we might be leaking sensitive information.
+      + [Task Manager] Keep entry highlighted when context menu or group dialog is open
+        This makes it easier to see what item the menu or popup is for.
+        In fact, the item should have stayed highlighted when the context menu is open but this was broken.
+        Also, for consistency, use the hover effect also for the group dialog (it used to be the "active" task).
+      + Backport 5.9/Master's GroupDialog code to 5.8.
+        This brings us to a common baseline on the three active branches
+        and addresses regressions on the 5.8 branch.
+        5.9's code added a scrollbar and improved keyboard nav.
+        Fixes KDE#378042
+      + Fix -Wreorder warning.
+      + possible to edit the default color scheme
+        no reason to not allow editing the default color sheme
+        with an invalid path, everyting falls back to the default,
+        keeping the dialog fully functional
+      + make sure the "default" sheme is actually default
+      + Remove implicit use of QtQml in Qt 5.7
+        The Plasma 5.8 branch should work with Qt 5.6.
+        This means we don't have the Connections enabled property available.
+        This moves the enabling logic into the handler.
+        Fixes KDE#380240 (Closes: 863243)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 16 Jun 2017 15:59:47 +0200
+
 plasma-desktop (4:5.8.6-1) unstable; urgency=medium
 
   * New upstream release (5.8.6)

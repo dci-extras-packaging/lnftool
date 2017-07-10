@@ -76,7 +76,7 @@ Build-Depends: baloo-kf5-dev (>= 5.15~),
                xserver-xorg-input-evdev-dev,
                xserver-xorg-input-synaptics-dev,
                xvfb
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/plasma/plasma-desktop.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/plasma/plasma-desktop.git

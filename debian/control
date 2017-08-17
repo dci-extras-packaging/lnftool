@@ -77,23 +77,40 @@ Build-Depends: baloo-kf5-dev (>= 5.15~),
                xserver-xorg-dev,
                xserver-xorg-input-evdev-dev,
                xserver-xorg-input-synaptics-dev,
-               xvfb
+               xvfb,
 Standards-Version: 4.0.0
 Homepage: https://projects.kde.org/projects/kde/workspace/plasma-desktop
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/plasma/plasma-desktop.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/plasma/plasma-desktop.git
 
-Package: plasma-desktop-dev
-Section: devel
+Package: kde-config-touchpad
+Depends: plasma-desktop, ${misc:Depends}
+Architecture: all
+Priority: extra
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
+
+Package: libkfontinst5
 Architecture: any
-Depends: libkfontinst5 (= ${binary:Version}),
-         libkfontinstui5 (= ${binary:Version}),
-         plasma-desktop (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: kde-config-touchpad (<< 4:5)
-Replaces: kde-config-touchpad (<< 4:5)
-Description: Tools and widgets for the desktop
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.
+
+Package: libkfontinstui5
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
  Through the use of visual effects and scalable graphics,
@@ -126,7 +143,7 @@ Depends: breeze,
          qml-module-qt-labs-folderlistmodel,
          qml-module-qt-labs-settings,
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Recommends: bluedevil,
             breeze-gtk-theme,
             fonts-noto,
@@ -152,50 +169,20 @@ Recommends: bluedevil,
             powerdevil,
             sni-qt,
             systemsettings,
-            user-manager
+            user-manager,
 Breaks: baloo-kf5 (<< 5.5),
         kactivities,
         kde-config-touchpad (<< 4:5),
         kde-workspace-bin,
         kde-workspace-data,
-        plasma-widget-kimpanel
+        plasma-widget-kimpanel,
 Replaces: baloo-kf5 (<< 5.5),
           kactivities,
           kde-config-touchpad (<< 4:5),
           kde-workspace-bin,
           kde-workspace-data,
-          plasma-widget-kimpanel
+          plasma-widget-kimpanel,
 Description: Tools and widgets for the desktop
- Plasma Desktop offers a beautiful looking desktop
- that takes complete advantage of modern computing technology.
- Through the use of visual effects and scalable graphics,
- the desktop experience is not only smooth but also pleasant
- to the eye. The looks of Plasma Desktop not only provide beauty,
- they are also used to support and improve your computer
- activities effectively, without being distracting.
- .
- This package is part of the KDE Plasma.
-
-Package: libkfontinst5
-Architecture: any
-Section: libs
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Tools and widgets for the desktop library
- Plasma Desktop offers a beautiful looking desktop
- that takes complete advantage of modern computing technology.
- Through the use of visual effects and scalable graphics,
- the desktop experience is not only smooth but also pleasant
- to the eye. The looks of Plasma Desktop not only provide beauty,
- they are also used to support and improve your computer
- activities effectively, without being distracting.
- .
- This package is part of the KDE Plasma.
-
-Package: libkfontinstui5
-Architecture: any
-Section: libs
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Tools and widgets for the desktop library
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
  Through the use of visual effects and scalable graphics,
@@ -214,7 +201,7 @@ Recommends: plasma-framework (>> 5.22),
             qml-module-org-kde-activities,
             qml-module-org-kde-extensionplugin,
             qml-module-org-kde-kwindowsystem,
-            qml-module-qtquick-dialogs
+            qml-module-qtquick-dialogs,
 Breaks: baloo-kf5 (<< 5.5),
         kactivities,
         kde-config-touchpad (<< 4:5),
@@ -222,7 +209,7 @@ Breaks: baloo-kf5 (<< 5.5),
         kde-workspace-data,
         kdeplasma-addons-data (<< 4:5.6~),
         plasma-widget-kimpanel,
-        ${kde-l10n:all}
+        ${kde-l10n:all},
 Replaces: baloo-kf5 (<< 5.5),
           kactivities,
           kde-config-touchpad (<< 4:5),
@@ -230,7 +217,7 @@ Replaces: baloo-kf5 (<< 5.5),
           kde-workspace-data,
           kdeplasma-addons-data (<< 4:5.6~),
           plasma-widget-kimpanel,
-          ${kde-l10n:all}
+          ${kde-l10n:all},
 Description: Tools and widgets for the desktop data files
  Plasma Desktop offers a beautiful looking desktop
  that takes complete advantage of modern computing technology.
@@ -244,10 +231,23 @@ Description: Tools and widgets for the desktop data files
  .
  This package contains the data files
 
-Package: kde-config-touchpad
-Depends: plasma-desktop, ${misc:Depends}
-Architecture: all
-Priority: extra
-Section: oldlibs
-Description: transitional dummy package
- This is a transitional dummy package. It can safely be removed.
+Package: plasma-desktop-dev
+Section: devel
+Architecture: any
+Depends: libkfontinst5 (= ${binary:Version}),
+         libkfontinstui5 (= ${binary:Version}),
+         plasma-desktop (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: kde-config-touchpad (<< 4:5)
+Replaces: kde-config-touchpad (<< 4:5)
+Description: Tools and widgets for the desktop
+ Plasma Desktop offers a beautiful looking desktop
+ that takes complete advantage of modern computing technology.
+ Through the use of visual effects and scalable graphics,
+ the desktop experience is not only smooth but also pleasant
+ to the eye. The looks of Plasma Desktop not only provide beauty,
+ they are also used to support and improve your computer
+ activities effectively, without being distracting.
+ .
+ This package is part of the KDE Plasma.

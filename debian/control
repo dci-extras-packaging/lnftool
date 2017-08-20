@@ -86,7 +86,7 @@ Vcs-Git: https://anonscm.debian.org/git/pkg-kde/plasma/plasma-desktop.git
 Package: kde-config-touchpad
 Depends: plasma-desktop, ${misc:Depends}
 Architecture: all
-Priority: extra
+Priority: optional
 Section: oldlibs
 Description: transitional dummy package
  This is a transitional dummy package. It can safely be removed.

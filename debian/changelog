@@ -1,4 +1,4 @@
-plasma-desktop (4:5.10.4-1~) UNRELEASED; urgency=medium
+plasma-desktop (4:5.10.5-1~) UNRELEASED; urgency=medium
 
   [ Maximiliano Curia ]
   * New upstream release (5.10.3).
@@ -8,12 +8,16 @@ plasma-desktop (4:5.10.4-1~) UNRELEASED; urgency=medium
   * Use the new breeze-gtk package name
   * Update build-deps and deps with the info from cmake
   * New upstream release (5.10.4).
+  * Update build-deps and deps with the info from cmake
+  * Update build-deps and deps with the info from cmake
+  * Set Priority to optional
+  * New upstream release (5.10.5).
 
   [ Jonathan Riddell ]
   * add gpg keyring
   * new build-deps needed breeze-dev libappstreamqt-dev
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 17 Aug 2017 13:35:18 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 27 Aug 2017 12:52:44 +0200
 
 plasma-desktop (4:5.8.7.1-1) unstable; urgency=medium
 

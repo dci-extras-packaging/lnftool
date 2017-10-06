@@ -1,3 +1,9 @@
+plasma-desktop (4:5.11.0-0neon) UNRELEASED; urgency=medium
+
+  * new release
+
+ -- Jonathan Riddell <jr@jriddell.org>  Fri, 06 Oct 2017 16:31:49 +0100
+
 plasma-desktop (4:5.10.5-0neon) xenial; urgency=medium
 
   * New release

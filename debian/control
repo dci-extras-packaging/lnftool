@@ -111,7 +111,6 @@ Depends: baloo-kf5,
          oxygen-sounds,
          plasma-desktop-data (= ${source:Version}),
          plasma-framework,
-         plasma-pa,
          plasma-workspace,
          polkit-kde-agent-1,
          qml-module-org-kde-draganddrop,
@@ -213,6 +212,7 @@ Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: plasma-framework,
+            plasma-pa,
             plasma-workspace,
             qml-module-org-kde-activities,
             qml-module-org-kde-extensionplugin,

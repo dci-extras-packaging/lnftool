@@ -1,9 +1,10 @@
-plasma-desktop (4:5.8.7-0neon) UNRELEASED; urgency=medium
+plasma-desktop (4:5.8.8-0neon) UNRELEASED; urgency=medium
 
   * New release
   * New Plasma LTS release
+  * New LTS release
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 23 May 2017 14:47:34 +0100
+ -- Jonathan Riddell <jr@jriddell.org>  Wed, 25 Oct 2017 14:56:44 +0100
 
 plasma-desktop (4:5.8.6-0neon) xenial; urgency=medium
 

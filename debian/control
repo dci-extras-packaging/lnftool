@@ -144,7 +144,6 @@ Recommends: bluedevil,
             libpam-kwallet5,
             muon-notifier,
             muon-updater,
-            plasma-pa,
             powerdevil,
             sni-qt,
             systemsettings,
@@ -213,6 +212,7 @@ Package: plasma-desktop-data
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: plasma-framework,
+            plasma-pa,
             plasma-workspace,
             qml-module-org-kde-activities,
             qml-module-org-kde-extensionplugin,

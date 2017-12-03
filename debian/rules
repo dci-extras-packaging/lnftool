@@ -21,3 +21,6 @@ override_dh_auto_test:
 	# Disable dh_auto_test, fourth test never ends
 	# xvfb-run -a dh_auto_test
 	:
+
+override_dh_install:
+	$(overridden_command) --sourcedir=debian/lookandfeeltool

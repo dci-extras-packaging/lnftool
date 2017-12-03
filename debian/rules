@@ -22,5 +22,5 @@ override_dh_auto_test:
 	# xvfb-run -a dh_auto_test
 	:
 
-override_dh_install:
-	$(overridden_command) --sourcedir=debian/lookandfeeltool
+override_dh_auto_install:
+	$(overridden_command) --destdir=debian/tmp

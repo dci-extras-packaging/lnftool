@@ -1,0 +1,176 @@
+From 26ea874137b59b25d3ec01fb1ac91c14f53adf22 Mon Sep 17 00:00:00 2001
+From: Marco Martin <notmart@gmail.com>
+Date: Tue, 7 Nov 2017 12:24:25 +0100
+Subject: [PATCH] Add a commandline tool to switch lnf package
+
+using the kcm c++ itself to do the switch, have a tool
+that can be used to switch lnf package from the command line
+---
+ kcms/lookandfeel/CMakeLists.txt | 51 +++++++++++++++++++++
+ kcms/lookandfeel/lnftool.cpp    | 98 +++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 149 insertions(+)
+ create mode 100644 kcms/lookandfeel/lnftool.cpp
+
+diff --git a/kcms/lookandfeel/CMakeLists.txt b/kcms/lookandfeel/CMakeLists.txt
+index 0bbad4ea..60d9431c 100644
+--- a/kcms/lookandfeel/CMakeLists.txt
++++ b/kcms/lookandfeel/CMakeLists.txt
+@@ -57,3 +57,54 @@ if(BUILD_TESTING)
+ endif()
+ 
+ kpackage_install_package(package kcm_lookandfeel kcms)
++
++###### Command line tool
++
++set(lookandfeeltool_SRCS
++    lnftool.cpp
++    kcm.cpp
++    ../krdb/krdb.cpp
++    ../cursortheme/xcursor/cursortheme.cpp
++    ../cursortheme/xcursor/xcursortheme.cpp
++)
++
++qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
++
++add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
++
++target_link_libraries(lookandfeeltool
++#     Qt5::Gui
++#     Qt5::Widgets
++#     KF5::Package
++#     KF5::I18n
++    
++    KF5::KIOWidgets
++  KF5::CoreAddons
++  KF5::KCMUtils
++  KF5::I18n
++  #TODO:kpackage
++KF5::Plasma
++KF5::PlasmaQuick
++  KF5::KDELibs4Support
++  KF5::Declarative
++  KF5::QuickAddons
++  KF5::NewStuff
++
++  Qt5::DBus
++  Qt5::Widgets
++  Qt5::QuickWidgets
++  ${X11_LIBRARIES}
++)
++
++if(X11_FOUND)
++    target_link_libraries(lookandfeeltool Qt5::X11Extras)
++endif()
++if (X11_Xcursor_FOUND)
++   target_link_libraries(lookandfeeltool ${X11_Xcursor_LIB})
++endif ()
++if (X11_Xfixes_FOUND)
++   target_link_libraries(lookandfeeltool ${X11_Xfixes_LIB})
++endif ()
++
++install( TARGETS lookandfeeltool ${INSTALL_TARGETS_DEFAULT_ARGS} )
++
+diff --git a/kcms/lookandfeel/lnftool.cpp b/kcms/lookandfeel/lnftool.cpp
+new file mode 100644
+index 00000000..df5fa277
+--- /dev/null
++++ b/kcms/lookandfeel/lnftool.cpp
+@@ -0,0 +1,98 @@
++/*
++ *   Copyright 2017 Marco MArtin <mart@kde.org>
++ *
++ *   This program is free software; you can redistribute it and/or modify
++ *   it under the terms of the GNU General Public License as
++ *   published by the Free Software Foundation; either version 2,
++ *   or (at your option) any later version.
++ *
++ *   This program is distributed in the hope that it will be useful,
++ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *   GNU General Public License for more details
++ *
++ *   You should have received a copy of the GNU Library General Public
++ *   License along with this program; if not, write to the
++ *   Free Software Foundation, Inc.,
++ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
++ */
++
++#include "kcm.h"
++
++#include <iostream>
++
++#include <qcommandlineparser.h>
++#include <QApplication>
++#include <QDebug>
++
++// Frameworks
++#include <KAboutData>
++#include <klocalizedstring.h>
++
++#include <KPackage/Package>
++#include <KPackage/PackageLoader>
++
++int main(int argc, char **argv)
++{
++    QApplication app(argc, argv);
++
++    const QString description = i18n("Look and feel tool");
++    const char version[] = "1.0";
++
++    // About data
++    KAboutData aboutData("lookandfeeltool", i18n("Look and feel tool"), version, i18n("Command line tool to apply look and feel packages."), KAboutLicense::GPL, i18n("Copyright 2017, Marco Martin"));
++    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
++    aboutData.setDesktopFileName("org.kde.lookandfeeltool");
++    KAboutData::setApplicationData(aboutData);
++
++    const static auto _l = QStringLiteral("list");
++    const static auto _a = QStringLiteral("apply");
++    const static auto _r = QStringLiteral("resetLayout");
++
++    QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l,
++                               i18n("List available Look and feel packages"));
++    QCommandLineOption _apply = QCommandLineOption(QStringList() << QStringLiteral("a") << _a,
++                                i18n("Apply a look and feel package"), i18n("packagename"));
++    QCommandLineOption _resetLayout = QCommandLineOption(QStringList() << 
++                               _r, i18n("Reset the Plasma Desktop layout"));
++
++    QCommandLineParser parser;
++    parser.addOption(_list);
++    parser.addOption(_apply);
++    parser.addOption(_resetLayout);
++    aboutData.setupCommandLine(&parser);
++
++    parser.process(app);
++    aboutData.processCommandLine(&parser);
++
++    if (!parser.isSet(_list) && !parser.isSet(_apply)) {
++        parser.showHelp();
++    }
++    
++    if (parser.isSet(_list)) {
++        QList<KPluginMetaData> pkgs = KPackage::PackageLoader::self()->listPackages("Plasma/LookAndFeel");
++
++        for (const KPluginMetaData &data : pkgs) {
++            std::cout << data.pluginId().toStdString() << std::endl;
++        }
++
++    } else if (parser.isSet(_apply)) {
++        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
++        p.setPath(parser.value(_apply));
++
++        //can't use package.isValid as lnf packages always fallback, even when not existing
++        if (p.metadata().pluginId() != parser.value(_apply)) {
++            std::cout << "Unable to find the look and feel package named " << parser.value(_apply).toStdString() << std::endl;
++            return 1;
++        }
++
++        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, QVariantList());
++        kcm->load();
++        kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
++        kcm->setSelectedPlugin(parser.value(_apply));
++        kcm->save();
++    }
++
++    return 0;
++}
++
